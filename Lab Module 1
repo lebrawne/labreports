@@ -6,7 +6,7 @@
 <html>
 <head> <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" href="https://latex.vercel.app/style.css" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css"/><script defer id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']]}};</script>
 
-<title>Fractal Geometry Lab Report</title>
+<title>Fractal Geometry Lab Report: Intro to Turtle Graphics</title>
 
 </head>
 	
@@ -16,7 +16,7 @@
 
 
   <header>
-    <h1>Fractal Geometry Lab Report</h1>
+    <h1>Fractal Geometry Lab Report: intro to Turtle Graphics</h1>
     <p class="author">
       [Leigh Brawner] <br />
       [February 1st, 2025]
@@ -36,8 +36,7 @@
       <section id="introduction">
         <h2>Introduction</h2>
         <p>
-          This basic template has been slightly edited from its original version through the addition of my full name, Leigh Brawner, as well as the inclusion
-	  of the original date of alteration. Furthermore, the following sections have also been modified: Code; Results and Analysis; and Conclusion. 
+          This Fractal Geometry Lab Report focuses on an introduction to turtle graphics. 
         </p>
       </section>
 
