@@ -352,8 +352,75 @@ Line 8: show() displays the final result.
 	<p>
 	Figure 10 shows the original code of the Koch Snowflake.
 	</p>
+<p>
+Line 1: initializeTurtle() is the function call that sets up the drawing environment for the turtle, i.e., the drawing canvas.
+</p>
 
-	 <figure>
+<p>
+Line 2: showturtle() reveals the turtle icon, enabling visualization of the turtle’s movement/position.
+</p>   
+
+<p>
+Line 5: we define a function called blip_line with two parameters—length and order. Length represents the function’s line length; order represents the associated drawn line’s complexity.
+</p>	
+
+<p>
+Lines 6-7: begins an if statement (conditional statement) with the condition that when order == 0 is met, the turtle will move forward by its given length. Note that == is the comparison operator. In other words, if order is 0, then turtle simply draws a straight line of the given length in line 7. 
+</p>
+
+<p>
+Lines 8-15: provided that all conditions given for the if statement are not met, the code for the written else portion, first designated in line 8, will be executed instead. So here, if the order is not 0, the else code will initiate. Line 9 is function blip_line() defined in line 5, with parameters specified under specific conditions; length is divided by 3, and order is reduced by -1—this moves the turtle forward and creates the fractal pattern. Line 10 uses left(60) to rotate turtle left by 60 degrees, and thus creates the angle. Line 11 repeats the aforementioned blip_line() function as explained, moving the turtle under the given conditions. Line 12 then uses right(120) to rotate turtle to right by 120 degrees. Line 13 then sends turtle forward. Line 13 works like line 10. Line 15 uses the blip_line function to finalize the turtle’s movement.
+</p>
+
+<p>
+Lines 18-21: here we draw the Koch Snowflake. 
+</p>   
+
+<p>
+Line 18: we define a function called koch_snowflake with two parameters, length and order. Length will be the overall size of the generated Koch Snowflake while order determines the overall level of detail; a more complicated snowflake will generate with higher orders.
+</p>	
+
+<p>
+Line 19: we start a for loop in given range. This means the loop will run a set number of times, as specified in the range. Here, since we have for _ in range(3), the loop will run 3 times total before stopping. 
+</p>
+
+<p>
+Line 20: we already defined the blip_line function in line 5. We can now use this blip_line function to draw a single element of the snowflake in this for loop.
+</p>
+
+<p>
+Line 21: recall that right() simply turns the turtle to the right by the set degrees. Here, we have right(120); this means the turtle will turn right by 120 degrees. This turn is performed after each segment of the Koch Snowflake is drawn in the for loop. If the current range in the for loop is less than 3, the snowflake will not connect. 
+</p>   
+
+<p>
+Line 24: jump() is the function that moves the turtle to the specified x-y coordinates on the canvas without drawing any line. Here, we start at jump(250,300).
+</p>	
+
+<p>
+Line 25: face() is a function that points the turtle in a specific direction; here, face(0) points the turtle East.
+</p>
+
+<p>
+Line 26: color() is the function that specifies the line color; here, color(‘blue’) specifies line color to be blue.
+</p>
+
+<p>
+Line 29: length is the variable that sets the line length. Overall, this will be the size of the generated snowflake. Smaller integers will yield a smaller snowflake, while larger integers will yield a larger snowflake. Note that the turtle’s drawing canvas will need to be altered for large snowflakes.
+</p>
+
+<p>
+Line 30: order is the variable used to assign different complexity values to the snowflake; higher order yield greater complexity and thus a more intricate pattern.
+</p>	      
+
+<p>
+Line 31: the function koch_snowflake is called to finally draw the snowflake with its associated two parameters, length and order, values assigned in lines 29-30. 
+</p>
+
+<p>
+Line 33: show() displays the final result.
+</p>	
+	      
+	<figure>
           <img
             src="Lab Module 2 Image 2.6 Result.png"
             alt="Original Result of Koch Snowflake"
