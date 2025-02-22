@@ -120,6 +120,11 @@ Lines 15-17: we use a for loop to simulate the random walk under specified condi
 <p>
 Lines 20-21: we execute the random walk by determining the steps and step length involved necessary for the previously written for loop to work. Line 20 is variable steps, which is assigned to an integer value; the larger this value, the longer and more complex the random walk becomes. Line 21is variable step_length, which is assigned to an integer value; this is the overall length of each step taken. Many steps with a short step length will create a scribble effect; fewer steps with a longer step length will create a zoomed in effect, so to speak.
 </p>
+
+<p>
+Line 23: the function random_walk(steps, step_length) executes the random walk using the specified values of the two parameters steps and step_length. The turtle will move forward by the specified steps, in our case 10, and the length of each step will be represented by step_length, which is currently also at 10. All angles in which the turtle turns will now be random generating the desired Brownian Motion effect. 
+</p>
+
 <p>
 Line 26: this line implements the show() function. This simply displays the visual result of all previous code. 
 </p>
