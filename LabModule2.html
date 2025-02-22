@@ -37,7 +37,7 @@
       <section id="introduction">
         <h2>Introduction</h2>
         <p>
-          This Fractal Geometry Lab Report focuses on drawing fractal curves. 
+          This Fractal Geometry Lab Report focuses on drawing fractal curves using turtle Python. 
         </p>
       </section>
 
@@ -102,7 +102,27 @@ Line 2: this line uses the !wget command, which is a command-line tool for downl
 	 <p> 
 	 Figure 2 shows the original Brownian Motion Code provided.
 	 </p>     
-
+<p>
+	Line 1: import sets up helper functions, i.e., enables us to access code from one module to another module to use functions, classes, and variables defined in other files. Here, we import random for later use in line 17 to help create Brownian motion.
+</p>
+<p>
+Lines 4 & 5: we initialize (activate) the turtle canvas, which is fundamentally the overall area the turtle will use for creation of shapes. We assign total canvas width in line 4, and total canvas height in line 5; associated integer values assigned to these variables can be altered. Instead of canvas_width or canvas_length, we could have easily titled them width and height, provided consistency is maintained throughout the entire program’s code.
+</p>
+<p>
+Line 6: initializeTurtle is a custom function to set up a drawing canvas; initial_window_size specifies the starting dimensions of the window; canvas_width and canvas_height are variables defined in lines 4-5 and are assigned integer values (as explained previously), which can be changed, that determine overall canvas width and height in pixels; mode is an argument for function initializeTurtle, with the value ‘auto’ that automatically updates the canvas display after each drawing command.
+</p>     
+<p>
+Lines 9-13: we create a function to perform a random walk (Brownian motion). Line 9 defines a variable which we title as random_walk() with two input parameters called steps and step_length. Line 10 uses speed(0) which sets the speed which our turtle draws, 0 being the fastest setting; as such, 0 turns off animation delays, whereas inters 1-10 represent other speed settings (from slowest to fastest) that retain the animation with possible delays in formation. Line 11 uses the function penup() to lift the turtle’s pen off the canvas to stop drawing. Line 12 uses jump() with two associated integer x-y canvas coordinates that can be changed with respect to overall canvas size; this effectively moves the turtle’s position. Since we used the penup() function previously in line 11, the turtle will not draw anything as it moves to a new location using jump(). Line 13 uses pendown(), which puts the turtle’s pen back down to begin drawing during the random walk in its new location determined by jump() in line 12.
+</p>
+<p>
+Lines 15-17: we use a for loop to simulate the random walk under specified conditions. Line 15 begins the for loop in conjunction with the in range() function, which returns a sequence of numbers and ends at the designated number; here, this number is variable steps, which is an integer assigned later in line 20. Line 16 is part of the for loop, and uses forward(), which moves the drawing turtle forward according to the variable step_length, which is an integer assigned in line 21. Line 17 uses right() to rotate the turtle to the right by a designated number of degrees; here, we implement random.uniform(), which randomly generates an integer degree angle between -180 and 180. This random rotation successfully creates a random walk, thus generating the desired Brownian motion effect. 
+</p>
+<p>
+Lines 20-21: we execute the random walk by determining the steps and step length involved necessary for the previously written for loop to work. Line 20 is variable steps, which is assigned to an integer value; the larger this value, the longer and more complex the random walk becomes. Line 21is variable step_length, which is assigned to an integer value; this is the overall length of each step taken. Many steps with a short step length will create a scribble effect; fewer steps with a longer step length will create a zoomed in effect, so to speak.
+</p>
+<p>
+Line 26: this line implements the show() function. This simply displays the visual result of all previous code. 
+</p>
 	<figure>
           <img
             src="Lab Module 2 Image 2.2 Brownian Motion Result.png"
