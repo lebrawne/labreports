@@ -212,7 +212,51 @@ Line 19: show() displays the final result.
 	Figure 6 is the original code of Koch Curve (Order 2).
 	 </p>      	      
 
+<p>
+Line 2: we define a function called blip_line with two parameters—length and order. Length represents the function’s line length; order represents the associated drawn line’s complexity.
+</p>
 
+<p>
+Lines 3-4: begins an if statement (conditional statement) with the condition that when order == 0 is met, the turtle will move forward by its given length. Note that == is the comparison operator. In other words, if order is 0, then turtle simply draws a straight line of the given length in line 4.
+</p>
+
+<p>
+Lines 5-12: provided that all conditions given for the if statement are not met, the code for the written else portion, first designated in line 5, will be executed instead. So here, if the order is not 0, the else code will initiate. Line 6 is function blip_line() defined in line 2, with parameters specified under specific conditions; length is divided by 3, and order is reduced by -1—this moves the turtle forward and creates the fractal pattern. Line 7 uses left(60) to rotate turtle left by 60 degrees, and thus creates the angle. Line 8 repeats the aforementioned blip_line() function as explained, moving the turtle under the given conditions. Line 9 then uses right(120) to rotate turtle to right by 120 degrees. Line 10 then sends turtle forward similarly to lines 6 and 8. Line 11 works like line 7. Line 12 uses the blip_line function to finalize the turtle’s movement.
+</p>
+
+<p>
+Line 15: initializeTurtle() is the function call that sets up the drawing environment for the turtle, i.e., the drawing canvas.
+</p>
+
+<p>
+Lines 17-26: we draw blip lines of different orders. 
+</p>
+
+<p>
+Line 18: jump() is the function that moves the turtle to the specified x-y coordinates on the canvas without drawing any line. 
+</p>
+	      
+<p>
+Line 19: face() is a function that points the turtle in a specific direction; for example, face(90) points the turtle North.
+</p>
+	      
+<p>
+Line 20: color() is the function that specifies the line color; for example, color(‘red’) specifies line color to be red. 
+</p>
+
+<p>
+Line 21: blip-line() is the defined function, as explained previously; blip_line(800,1) sets initial line length to be 800, while 1 is the line’s complexity, i.e., the order of the fractal. This is the red line shown in the resulting image. 
+</p>
+
+<p>
+Lines 23-26 work similarly, but with the following changes: our initial turtle starting position is slightly different in the y-coordinate, now at jump(50,350) instead of jump(50,400); our face(), or direction, is still North; line color is now blue; and our blip_line function has the same line length but now operates with order 2, yielding a more complex pattern. This is the blue line, which has a middle shape reminiscent to a star, in the resulting image. Higher orders will consequently break our generated line into smaller and smaller segments, yielding smaller blips at angles to manifest a more intricate pattern. 
+</p>
+
+<p>
+Line 28: show() displays the final result. 
+</p>
+
+	      
 	<figure>
           <img
             src="Lab Module 2 Image 2.4 Result.png"
