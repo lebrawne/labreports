@@ -156,8 +156,27 @@ Line 26: this line implements the show() function. This simply displays the visu
 
          <p>
 	Figure 4 is the original code of Koch Curve (Order 1).  
-	 </p>      
+	 </p>     
 
+<p>
+Line 1: initializeTurtle() is the function call that sets up the drawing environment for the turtle, i.e., the drawing canvas.
+</p>
+
+<p>
+Line 2: showturtle() reveals the turtle icon, enabling visualization of the turtle’s movement/position.
+</p>  
+
+<p>
+Line 4: jump() repositions the turtle to the specified x,y coordinate values. For example, jump(50,400) position the turtle at x=50, y=400 on the canvas. 
+</p>
+
+<p>
+Lines 9-15: we basically create a line with a bend (blip). Lines 9, 11, 13, 15: we use forward() to move the turtle forward by the specified distance in pixels in its current direction; interestingly, we can do mathematical operations, such as 800/3, for the distance, instead of just using a simple integer. Line 10: we use left() to rotate the turtle by the specified degrees to its left; for example, left(60) rotates turtle 60 degrees to its left and the forward() in line 11 moves the turtle forward in that direction. Line 12: we use right() similarly to left(); by rotating the turtle by a sharp 120 degrees, this will create the intended blip. Line 13: the forward() moves the turtle forward, creating the blip. Lines 14 and 15: left() and forward() are used as explained above, generating the final result.
+</p>
+
+<p>
+Line 19: show() displays the final result. 
+</p>
 	<figure>
           <img
             src="Lab Module 2 Image 2.3 Result.png"
