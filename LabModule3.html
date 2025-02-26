@@ -74,8 +74,9 @@
 
 	<p>
 	Figure 1 shows the code for installing the library associated to this module. This installs the turtle library as stated so that we can implement commands specific to turtle.
-</p> 
-
+</p>
+<p>Line 1: we use the !wget command, which is a command-line tool for downloading files from the internet. In this context, it's used within the Jupyter Notebook to download a Python script called turtle_setup.py. -O turtle_setup.py specifies that the downloaded file should be saved with the name turtle_setup.py. 'https://raw.githubusercontent.com/williamedwardhahn/fractal25/refs/heads/main/turtle_setup.py' is the URL from where the turtle_setup.py script is downloaded. It's hosted on GitHub.</p>      
+<p>Line 2: this implements from and import so that we can use the script downloaded from turtle_setup.py. Note that * means ‘all’, so that all functions and definitions from said script will be available for use.</p>
 	 <figure>
           <img
             src="Lab Module 3 Image 3.2 Code.png"
@@ -88,7 +89,15 @@
              Equilateral Triangle Function Code
           </figcaption>
         </figure>      
-      
+    <p>
+	This concise code formulates an equilateral triangle using a for loop; however, the turtle will need additional code to move, which will be discussed in the next figure. 
+	Line 2: we use def to define a function called draw_triangle that has one parameter, called length. Length will be the overall size of the generated triangle. 
+	Line 3: we start a for loop in given range. This means the loop will run a set number of times, as specified in the range. Here, since we have for _ in range(3): , the loop will run 3 times total before stopping.  
+    	Line 4: the function forward() is called to move the turtle by the specified length; specifying length will occur in the next figure, not here.
+	Line 5: the function left() is used to swivel the turtle by the given degrees after the turtle completes its specified length in line 4; since we have left(120), our turtle will rotate left by a 120 angle after concluding said distance. 
+    </p>  
+	 
+	      
 	      <figure>
           <img
             src="Lab Module 3 Image 3.3 Code.png"
@@ -101,7 +110,18 @@
              Drawing Equilateral Triangle Code
           </figcaption>
         </figure>	      
-
+<p>     Line 1: initializeTurtle() is the function call that sets up the drawing environment for the turtle, i.e., the drawing canvas. </p>
+<p>     Line 2: showturtle() reveals the turtle icon, enabling visualization of the turtle’s movement/position. </p>
+<p>     Lines 5-8: this concise code formulates an equilateral triangle using a for loop, and was explained in-depth in the previous section. </p>	
+<p>     Line 10: we describes the intention of the code's operation in lines 11-15. </p>
+<p>     Line 11: jump(x,y) is the function that moves the turtle to the specified x-y coordinates on the canvas without drawing any line. Here, we start at jump(300,500). </p>
+<p>     Line 12: face() is a function that points the turtle in a specific direction; here, face(90) points the turtle North. </p>
+<p>     Line 13: color() is the function that specifies the line color; here, color(‘green’) specifies line color to be green. </p>
+<p>     Line 14: length() is the variable that sets the line length. Overall, this will be the size of the generated equilateral triangle (smaller numbers will yield smaller triangles, whereas larger numbers will yield larger triangles). </p>
+<p>     Line 15: the function draw_triangle is called to finally draw the equilateral triangle with its associated parameter, length, a value assigned in line 14. </p>
+<p>     Line 16: show() displays the final result. </p>
+	      
+	      
 	      <figure>
           <img
             src="Lab Module 3 Image 3.3 Result.png"
@@ -114,7 +134,8 @@
              Drawing Equilateral Triangle Result
           </figcaption>
         </figure>
-
+<p> This is the result of the turtle drawing our equilateral triangle function. </p>
+	     
 	      <figure>
           <img
             src="Lab Module 3 Image 3.4 Code.png"
@@ -128,6 +149,22 @@
           </figcaption>
         </figure>
 
+<p> Line 1: uses # to describe the function of the following code; in this case, we will be defining a Sierpinski Triangle Function using a recursive method. </p>
+<p> Line 2: we use def to define a function called sierpinski_triangle with two parameters, length and order. Length represents the function’s line length; in this case, the triangle's length. Order determines the associated drawn line’s complexity, i.e., the overall complexity of the Sierpinski Triangle. </p>   
+<p> Lines 3-4: begins an if statement (conditional statement) with the base case condition that when order == 0 is met, the turtle will move forward by its given length. Note that == is the comparison operator. In other words, if order is 0, then turtle simply draws the equilateral triangle function defined earlier (with accompanied given length, of course). </p>	      
+<p> Line 5: this begins the else component of our if statement, which occurs when the given base case is not met, i.e., when order is not 0. </p>	      
+<p> Line 6: sierpinski triangles fundamentally contain smaller triangles within triangles, namely 3 per triangle. This line of code initiates the first smaller triangle within the defined sierpinski function, sierpinski_function(length / 2, order -1). Here, current length is reduced by half using the mathematical division operator, and order is reduced by 1. </p>	
+<p> Line 7: the function forward() moves the turtle forward, in this case by length / 2. </p>
+<p> Line 8: draws the second smaller sierpinski triangle, similarly to line 6. </p>
+<p> Line 9: the function backward() moves the turtle backward; in this case, we move backward by length / 2, thus returning the turtle to the initial position. </p>
+<p> Line 10: the left() function rotates the turtle left by the given degrees. In this case, left(60) rotates the turtle 60 degrees to the left. No movement is made, only rotation.  </p>
+<p> Line 11: the turtle now moves forward by a distance of length / 2, which occurs after the rotation in line 10. </p>
+<p> Line 12: the function right() rotates the turtle by a set number of degrees to the right. After completing the set distance in line 12, the turtle rotates right by 60 degrees. </p>
+<p> Line 13: draws our third smaller triangle, similarly to line 6; thus, we dinstinguish the fractal as a sierpinski triangle. </p>
+<p> Line 14: the left() function rotates the turtle left by the given degrees. In this case, left(60) rotates the turtle 60 degrees to the left. No movement is made, only rotation. </p>
+<p> Line 15: the function backward() moves the turtle backward; in this case, we move backward by length / 2, connecting the figure. </p>
+<p> Line 16:the function right() rotates the turtle by a set number of degrees to the right; this rotation finalizes the specified sierpinski triangle recursion. </p>
+	      
 	      <figure>
           <img
             src="Lab Module 3 Image 3.5 Code.png"
@@ -141,6 +178,16 @@
           </figcaption>
         </figure>
 
+<p> Line 1: initializeTurtle() is the function call that sets up the drawing environment for the turtle, i.e., the drawing canvas. </p>	      
+<p> Line 2: showturtle() reveals the turtle icon, enabling visualization of the turtle’s movement/position. </p>	
+<p> Line 5: jump(x,y) is the function that moves the turtle to the specified x-y coordinates on the canvas without drawing any line. Here, we start at jump(300,500). </p>
+<p> Line 6: face() is a function that points the turtle in a specific direction; here, face(90) points the turtle North. </p>
+<p> Line 7: color() is the function that specifies the line color; here, color(‘green’) specifies line color to be green. </p>
+<p> Line 10: length is the variable that sets the line length. This will be the overall size of the generated sierpinski triangle (smaller numbers will yield smaller sierpinski triangles, whereas larger numbers will yield larger sierpinski triangles). Here, our length is 400. </p>
+<p> Line 11: order is the variable used to assign different complexity values to the sierpinski triangle; higher order yields greater complexity and thus a more intricate pattern of the fractal overall. Here, the order is 4. </p>
+<p> Line 12: the recursive function sierpinski_triangle is called to finally draw the sierpinski triangle with its associated two parameters, length and order, values assigned in lines 10-11. </p>
+<p> Line 14: show() displays the final result. </p>
+	      	      
 
  <figure>
           <img
@@ -151,7 +198,7 @@
             loading="lazy"
           />
           <figcaption>
-             Sierpinski Triangle Function
+             Sierpinski Triangle Fractal
           </figcaption>
         </figure>      
       
