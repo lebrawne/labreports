@@ -264,10 +264,18 @@
             loading="lazy"
           />
           <figcaption>
-             Image 3.6 Code
+             Cellular Automata Section
           </figcaption>
         </figure>	      
-
+<p> Line 1: This line imports the numpy library, which is a fundamental package for numerical computation in Python. It's aliased as np for convenience, so you can refer to numpy functions using np prefix (e.g., np.array). numpy provides support for arrays, matrices, and various mathematical functions.</p>
+<p> Line 2: This line imports the matplotlib.pyplot module, which provides a collection of functions that make matplotlib work like MATLAB. It's aliased as plt. This is used for creating visualizations like plots, charts, and in this case, images.</p>	   
+<p> Line 4: This line defines a function named plot that takes one argument, x. This x is expected to be a 2D array (like a matrix). </p>
+<p> Line 5: This line creates a new figure and a set of subplots. The fig variable holds the figure object, and the ax variable holds the axes object. </p>
+<p> Line 6: This is the core of the plotting. The imshow function from the ax object takes the input array x and displays it as an image. The cmap='gray' argument sets the color map to grayscale, meaning the values in the array will be represented using shades of gray. </p>
+<p> Line 7: This line turns off the axes of the plot, so the tick marks and labels are not visible. </p>
+<p> Line 8: This line sets the size of the generated figure to 10x10 inches. </p>
+<p> Line 9: This line displays the created plot. </p>
+	      
 	      <figure>
           <img
             src="Lab Module 3 Image 3.7 Code.png"
@@ -280,7 +288,11 @@
              Image 3.7 Code
           </figcaption>
         </figure>
+<p> Line 1: This line initializes a 2D array, also known as a matrix, using np.zeros(). np.zeros((100,100)) creates a 100x100 matrix filled with zeros. .astype(int) converts the data type of the elements in the matrix to integers. The resulting matrix is assigned to the variable C. </p>
+<p> Line 2: This line modifies the matrix C. It sets the value at the position [0, 50] to 1. Remember that Python uses zero-based indexing, so 0 refers to the first row, and 50 refers to the 51st column. </p>
+<p> Line 3:This line calls a previously defined function called plot(), passing the matrix C as an argument. </p>
 
+<p> In summary, this code creates a 100x100 matrix of zeros, sets the element at row 0 and column 50 to 1, and then displays this matrix as a grayscale image, where the single 1 value will be a different color from the zeros. </p>
 	      <figure>
           <img
             src="Lab Module 3 Image 3.7 Result.png"
@@ -290,7 +302,7 @@
             loading="lazy"
           />
           <figcaption>
-             Image 3.7 Result
+             100 x 100 matrix of zeroes result
           </figcaption>
         </figure>
 
@@ -303,10 +315,19 @@
             loading="lazy"
           />
           <figcaption>
-             Image 3.8 Code
+             Binary in Python
           </figcaption>
         </figure>
+<p> Line 1: This line assigns the integer value 90 to the variable num. </p>
+<p> Line 2: print(): This is a built-in Python function that displays output to the console.
+f'{num:08b}': This is an f-string, a way to embed expressions inside string literals.
+num: This inserts the value of the num variable (which is 90).
+:08b: This is a format specifier that tells Python how to format the inserted value:
+b: This indicates that the value should be formatted as a binary number.
+08: This specifies that the binary representation should be padded with leading zeros so that it has a total width of 8 characters. </p>
 
+<p> This code takes decimal number 90, converts it to its binary equivalent, then prints the associated 8-digit binary representation, padding with leading zeros if necessary. </p> 
+	      
  	<figure>
           <img
             src="Lab Module 3 Image 3.9 Code.png"
@@ -316,10 +337,28 @@
             loading="lazy"
           />
           <figcaption>
-             Image 3.9 Code
+             Cellular Automaton (1)
           </figcaption>
         </figure>      
-      
+
+<p> Line 1: This line initializes a 3-dimensional numpy array called rule. np.zeros((2,2,2)) creates a 3D array filled with zeros. The dimensions of the array are (2, 2, 2), meaning it can be thought of as a cube with 2 layers, each of which is a 2x2 matrix. In this context, each of these dimensions is representing the three neighbors of a cell.</p>
+<p> Lines 3-10: These lines assign specific values (either 0 or 1) to each position in the rule array. Each position in the array represents a different possible configuration of the cell's three neighbors. The indices of the array access the following pattern: rule[NW, N, NE]. In this case:
+
+NW is the state of the cell to the Northwest (or the cell directly to the left in the previous row)
+N is the state of the cell to the North (or the cell directly above in the previous row)
+NE is the state of the cell to the Northeast (or the cell directly to the right in the previous row)
+Let's break down what each assignment represents:
+
+rule[0,0,0] = 0: If the Northwest, North, and Northeast cells are all 0, the cell becomes 0.
+rule[0,0,1] = 1: If the Northwest and North cells are 0 and Northeast is 1, the cell becomes 1.
+rule[0,1,0] = 0: If the Northwest cell is 0, North is 1, and Northeast is 0, the cell becomes 0.
+rule[0,1,1] = 1: If the Northwest cell is 0, North is 1, and Northeast is 1, the cell becomes 1.
+rule[1,0,0] = 1: If the Northwest cell is 1, North is 0, and Northeast is 0, the cell becomes 1.
+rule[1,0,1] = 0: If the Northwest cell is 1, North is 0, and Northeast is 1, the cell becomes 0.
+rule[1,1,0] = 1: If the Northwest cell is 1, North is 1, and Northeast is 0, the cell becomes 1.
+rule[1,1,1] = 0: If the Northwest, North, and Northeast cells are all 1, the cell becomes 0. </p>
+
+<p> In summary, this code defines a rule set for a cellular automaton, where a cell's next state depends on the states of its immediate neighbors based on the 3-dimensional rule array. </p>	      
 	      <figure>
           <img
             src="Lab Module 3 Image 3.10 Code.png"
@@ -329,10 +368,18 @@
             loading="lazy"
           />
           <figcaption>
-             Image 3.10 Code
+             Cellular Automata Function
           </figcaption>
         </figure>	      
 
+<p> Line 1: This line defines a function named CA that takes one argument, X. It's expected that X is a 2-dimensional NumPy array representing the grid of cells. </p>
+<p> Lines 3-4: This is a nested for loop. The outer loop iterates through the rows of the array X, from the second row (index 1) up to the second to last row. Similarly, the inner loop iterates through the columns of the array X, from the second column (index 1) up to the second to last column. This is done so that the code does not access values outside of the array bounds when calculating neighbor values. The comments #row and #col are there to remind the reader of what the loops represent. </p>
+<p> Lines 6-8: These lines extract the values of the neighboring cells for the cell at position (i, j). In particular, we are only using the immediate row above cell (i,j) to compute the new state of the cell. - N (North) gets the value of the cell directly above (i, j). - NW (Northwest) gets the value of the cell diagonally above and to the left of (i, j). - NE (Northeast) gets the value of the cell diagonally above and to the right of (i, j). </p>	      
+<p> Line 10: This is the core of the CA update rule. It calculates the new state of the cell at position (i, j). The new state is assigned by indexing into the rule array. The rule is a 3D array that determines the new state based on the neighboring states: NW, N, and NE.</p>
+<p> Line 12: The function returns the modified array X, which now contains the updated states of the cells after one iteration. </p>
+
+<p> In summary, this CA function implements a one-dimensional cellular automaton where the state of a cell in the next row is determined by the states of its three immediate neighbors (NW, N, and NE) from the previous row according to a predefined rule. The rule is stored in a 3D numpy array called rule. This function does not modify the first or last row and the first and last columns of the array. </p>
+	      
 	      <figure>
           <img
             src="Lab Module 3 Image 3.11 Code.png"
@@ -342,10 +389,11 @@
             loading="lazy"
           />
           <figcaption>
-             Image 3.11 Code
+             Plotting the Cellular Automaton Function
           </figcaption>
         </figure>
-
+<p> Line 1: The CA function is called with the initial array C. The CA function modifies the array C based on the specified cellular automata rule, and a modified 2D array is returned as output. The resulting 2D array from CA is then passed as the argument to the plot function. The plot function displays the modified array as a grayscale image using matplotlib. </p>
+	      
 	      <figure>
           <img
             src="Lab Module 3 Image 3.11 Result.png"
@@ -355,7 +403,7 @@
             loading="lazy"
           />
           <figcaption>
-             Image 3.11 Result
+             Plot of the Cellular Automaton Function
           </figcaption>
         </figure>
 
@@ -368,10 +416,22 @@
             loading="lazy"
           />
           <figcaption>
-             Image 3.12 Code
+             Cellular Automata Function and Execution
           </figcaption>
         </figure>
-
+<p> Line 1: This line defines a function named CA that takes a 2D array, represented by the variable X, as its input. This array will represent the state of the cellular automaton grid. </p>
+<p> Line 3: This starts a for loop that iterates through the rows of the array X. X.shape[0] gets the number of rows, and it starts from index 1 and goes up to, but not including, the second to last index. This avoids going out of bounds when accessing neighbors in the next loop. </p>
+<p> Line 4: This is a nested for loop that iterates through the columns of the array X, skipping the first and last columns, similar to the row loop. X.shape[1] gets the number of columns.</p>
+<p> Line 6: X[i-1,j-1]: accesses the top-left neighbor of the current cell.
+X[i-1,j]: accesses the top-center neighbor of the current cell.
+X[i-1,j+1]: accesses the top-right neighbor of the current cell.
+4*X[i-1,j-1] + 2*X[i-1,j] + X[i-1,j+1]: This combines the values of the three neighbors by applying weights. The neighbors can be either 0 or 1. This creates an integer value between 0 and 7.
+2**(4*X[i-1,j-1] + 2*X[i-1,j] + X[i-1,j+1]): This raises 2 to the power of the weighted neighbor sum, creating a unique value based on the neighborhood configuration.
+rule / ... This divides the global variable rule (explained below) by the previously generated number.
+(... ) % 2: The result of the division is then taken modulo 2, to ensure the cell is only ever 0 or 1. This calculates the new state (0 or 1) for the current cell at X[i, j] based on the state of its neighbors in the previous row. </p>
+<p> Line 8: The function returns the updated cellular automaton grid.</p>
+<p> Line 10:This sets a global variable named rule to 90. This variable is used in the CA function to determine the update rule applied to each cell. It’s important to note that in this specific implementation the rule number is NOT used as a binary value to create a lookup table. </p>
+<p> Line 12: This line calls the CA function with the initial state of the cellular automaton grid, stored in the variable C, and then passes the returned updated grid to a plot function that displays the output using matplotlib. The updated C variable is not stored after running the function. </p>	      
  <figure>
           <img
             src="Lab Module 3 Image 3.12 Result.png"
@@ -381,7 +441,7 @@
             loading="lazy"
           />
           <figcaption>
-             Image 3.12 Result
+             Cellular Automata Function and Execution Resulting Image
           </figcaption>
         </figure>      
       
@@ -394,10 +454,11 @@
             loading="lazy"
           />
           <figcaption>
-             Image 3.13 Code
+             Final for Loop
           </figcaption>
         </figure>	      
-
+<p> Line 1: This line initiates a for loop. The loop variable is named rule. In each iteration, rule takes on the next value from the list [30, 62, 90, 110, 126]. So, the code inside the loop will be executed five times, with rule being 30, 62, 90, 110, and 126 respectively in each of the 5 loops.</p>
+<p> Line 2: This line is the body of the loop. It calls the function CA() with the variable C and passes the result to the function plot(). The CA() function, as defined in the earlier code, appears to be a function that applies a cellular automaton rule to a grid, and plot() displays that grid. The value of rule that was set in the for loop is used in this CA() function. </p>
 	      <figure>
           <img
             src="Lab Module 3 Image 3.13a Result.png"
