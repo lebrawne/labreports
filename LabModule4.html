@@ -90,11 +90,11 @@
             loading="lazy"
           />
           <figcaption>
-            Fractal Tree Recursive Function Code
+            Fractal Tree Function Code (1st, Less Detailed Tree)
           </figcaption>
         </figure>
 
-	<p> Line 1: this is description of the code's intention. Essentially, we create a fractal_tree function that draws a tree-like structure by repeatedly drawing lines and branching into smaller lines using recursion. The depth parameter controls the complexity of the tree, and the base case ensures the recursion eventually stops.</p>
+	<p> Line 1: this is polite description of the code's intention. Essentially, we create a fractal_tree function that draws a tree-like structure by repeatedly drawing lines and branching into smaller lines using recursion. The depth parameter controls the complexity of the tree, and the base case ensures the recursion eventually stops.</p>
 	 <p>Line 2: def is a keyword used to define a function. 
 		 fractal_tree is the name of the function. 
 		 length and depth are the input parameters of the function. 
@@ -119,12 +119,12 @@ If the depth reaches 0, it means we've reached the end of a branch and the funct
             loading="lazy"
           />
           <figcaption>
-            Fractal Tree Recursive Function Drawing Code
+            Fractal Tree Function Drawing Environment Code (1st, Less Detailed Tree)
           </figcaption>
         </figure>
 
          <p> Line 1: this is polite description of the code's intention. Essentially, the overall code in lines 2-17 will initialize the drawing environment, positions the turtle, sets the tree parameters, calls the function to draw the tree and then displays the final result in the turtle graphics window. </p>      
-	<p> Line 2: This line initializes the turtle graphics environment. It creates a window where the drawing will take place. The initial_window_size argument sets the window's width and height to 500 pixels each.</p>
+	<p> Line 2: this line initializes the turtle graphics environment. It creates a window where the drawing will take place. The initial_window_size argument sets the window's width and height to 500 pixels each.</p>
 	<p> Line 4: this is polite description of the code's intent for lines 5-7. </p>
 	<p> Line 5: jump(250, 450): this command moves the turtle to a specific position on the canvas without drawing a line. The coordinates (250, 450) represent the horizontal (x) and vertical (y) position, respectively. This places the turtle near the bottom center of the canvas to start drawing the tree from there.</p>
 	<p> Line 6: face(0): this command sets the turtle's initial direction; 0 degrees typically points towards the right side of the canvas (East).</p>
@@ -146,7 +146,7 @@ If the depth reaches 0, it means we've reached the end of a branch and the funct
             loading="lazy"
           />
           <figcaption>
-            Fractal Tree Recursive Function Image
+            Fractal Tree Function Image (1st, Less Detailed Tree)
           </figcaption>
         </figure>
 
@@ -161,13 +161,26 @@ If the depth reaches 0, it means we've reached the end of a branch and the funct
             loading="lazy"
           />
           <figcaption>
-            Fractal Tree Function Code (Nonrecursive)
+            Fractal Tree Function Code (2nd, More Detailed Tree)
           </figcaption>
         </figure>
 
-         <p> </p>      
-
-
+         <p> Line 1: this is polite description of the code's intention. Essentially, this code block defines a function called build_tree that uses recursion to draw a fractal tree using 3 parameters instead of the previous function fractal_tree, which only uses 2 parameters. It is thus more detailed than the fractal_tree.
+	 Overall, function build_tree will draw a branch, then recursively draw two smaller branches at an angle from the end of the first branch. This process will continue until the branches become too small, ultimately resulting in a fractal tree pattern. </p>   
+	<p> Line 2: this defines our aforementioned function, called build_tree, that will accepts three parameters, which are named and detailed as follows:
+branch_length is the initial length of the branch;
+shorten_by is the amount by which the branch length is reduced in each recursive call;
+and angle is the angle by which the turtle turns to draw the branches. </p>
+	<p> Line 3: this is the If statement that sets the base case for the recursion. So if function the branch_length is less than or equal to 3, the function stops and returns, preventing the tree from drawing infinitely small branches.</p>
+	<p> Line 5: this uses the forward() command, and moves the turtle forward by the given branch_length, thus drawing a branch of the tree. </p>
+	<p> Line 7: this calculates the length of the next branch by subtracting shorten_by from the current branch_length. Essentially, this makes the branches shorter as the tree grows.</p>
+	<p> Lines 9-17: essentially the foundation of the recursion for tree development. </p>
+	<p> Line 9: uses the left() command to turn the turtle left by the given angle. </p>
+	<p> Line 11: this calls the build_tree function again with a new, shorter branch length, and draws a branch on the left side.</p>
+	<p> Line 13: uses the right() command to turn the turtle right by twice the angle in order to position it for the next branch. </p>
+	<p> Line 15: this calls the build_tree function again to draw a branch on the right side. </p>
+	<p> Line 17: uses the left() command to turn the turtle back to its original direction. </p>
+	<p> Line 19: moves the turtle backward by the original branch_length, returning it to the starting point of the branch before continuing the recursion. </p>
 	<figure>
           <img
             src="Module 4 Fractal Tree Function Drawing Code.png"
@@ -177,11 +190,23 @@ If the depth reaches 0, it means we've reached the end of a branch and the funct
             loading="lazy"
           />
           <figcaption>
-             Fractal Tree Function Drawing Code (Nonrecursive)
+             Fractal Tree Function Drawing Environment Code (2nd, More Detailed Tree)
           </figcaption>
         </figure>
 
-         <p> </p>      	      
+         <p> Line 1: this is polite description of the code's intention. Essentially, the overall code in lines 2-13 will initialize the drawing environment, positions the turtle, sets the tree parameters, calls the function to draw the tree and then displays the final result in the turtle graphics window. </p>      
+	 <p> Line 2: this line initializes the turtle graphics environment. It creates a window where the drawing will take place. The initial_window_size argument sets the window's width and height to 800 pixels each. This is larger than the previous environment, which was 500 by 500 pixels. </p>
+	 <p> Line 4: this is polite description of the code's intent for lines 5-7. </p>
+	<p> Line 5: jump(400, 600): this command moves the turtle to a specific position on the canvas without drawing a line. The coordinates (400, 600) represent the horizontal (x) and vertical (y) position, respectively. This places the turtle near the bottom center of the canvas to start drawing the tree from there.</p>
+	<p> Line 6: face(0): this command sets the turtle's initial direction; 0 degrees typically points towards the right side of the canvas (East).</p>
+	<p> Line 7: color('green'): this command sets the color of the lines that the turtle will draw to green. This means our tree branches will be green. Colors can easy be changed; for example, instead of green, we could type black to form a shadowy tree.</p></p>
+	<p> Line 9: this is polite description of the code's intent for line 10. </p>  
+	<p> Line 10: build_tree(80, 8, 25): this calls the build_tree function, which is previously defined. This function contains the logic for drawing the fractal tree and has 3 parameters with given values, in this case:
+80, which specifies the initial length of the tree's branches;
+8, which is the specified amount by which the branch length is reduced in each recursive step;
+and 25, which is the specified angle at which branches are drawn. </p>
+	<p> Line 12: this is polite description of the code's intent for line 13. </p>
+	<p> Line 13: show(): after the tree is drawn using the 3-parameter build_tree function in line 10, this command ensures that the drawing is displayed in the turtle graphics window, making it visible. Without command show(), all the written code will not yield an image in Python.</p> 	      
 
 
 	<figure>
@@ -193,12 +218,11 @@ If the depth reaches 0, it means we've reached the end of a branch and the funct
             loading="lazy"
           />
           <figcaption>
-             Fractal Tree Image (Nonrecursive Code Result)
+             Fractal Tree Image (2nd, More Detailed Tree)
           </figcaption>
         </figure>
 
-         <p> </p> 	   
-	      
+         <p> </p>
       </section>
 
 	
