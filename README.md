@@ -13,6 +13,8 @@ Lab Module 3: https://lebrawne.github.io/labreports/LabModule3.html
 
 Lab Module 4: https://lebrawne.github.io/labreports/LabModule4.html
 
+Lab Module 5: https://lebrawne.github.io/labreports/LabModule5.html
+
 # Notes
 
 Hello World
