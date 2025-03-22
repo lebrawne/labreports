@@ -17,6 +17,8 @@ Lab Module 5: https://lebrawne.github.io/labreports/LabModule5.html
 
 Lab Module 6: https://lebrawne.github.io/labreports/LabModule6.html
 
+Viewing Material: https://lebrawne.github.io/labreports/ViewingMaterial.html
+
 # Notes
 
 Hello World
