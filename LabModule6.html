@@ -1,0 +1,456 @@
+<!-- INTRODUCTION SECTION -->
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------------------------------------- -->
+<html>
+<head> <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" href="https://latex.vercel.app/style.css" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css"/><script defer id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']]}};</script>
+
+<title>Fractal Geometry Lab Report: Infinite Dust</title>
+
+</head>
+	
+<body id="top">
+
+
+
+
+  <header>
+    <h1>Fractal Geometry Lab Report: Module 5 Infinite Dust</h1>
+    <p class="author">
+      [Leigh Brawner] <br />
+      [March 18th, 2025]
+    </p>
+  </header>
+  
+
+
+
+  <main>
+    <article class="indent-pars">
+      
+      <!-- INTRODUCTION SECTION -->
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+        This module concentrates on what is called the Cantor Set, which is also known as the Cantor comb or no middle third set (Barile). 
+	The Cantor Set was originally founded by Irish mathematician, Henry John Stephen Smith, in 1874, but received
+	its notoriety due to the more famous German mathematician, Georg Cantor (Cantor Set, Smith). Georg Cantor's 10-year work from
+	1874 to 1884 is widely considered to be the origin of modern set theory (Georg Cantor). In addition to becoming the father of set theory, 
+	Georg Cantor helped lay the foundation of modern point-set topology (Cantor Set). Module 5 focuses on what is referred to as the Cantor Ternary Set. 
+	Fundamentally, the Cantor Ternary Set is formulated by trisecting a line segment and removing its middle third, thus creating two shorter line segments (Cantor Set). 
+	This process can infinitely repeat, hence its focus on recursion for its formation in Python coding. 
+	Interestingly, the Cantor Ternary Set's complement is referred to as a fractal string, which we explore further in the next sections (Cantor Set). Finally,
+	we will discuss the Cantor Set's relation to a famous fractal called the Sierpinski Carpet (Cantor Set, Sierpinski Carpet). 
+	</p>
+
+        <figure>
+          <img
+            src="Cantor and Smith.png"
+            alt="Cantor Set Code"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+            Georg Cantor and Henry John Stephen Smith
+          </figcaption>
+        </figure>	      
+      </section>
+
+
+     
+	<!-- -------------------------------------------------------------------------------------------- -->
+	<!-- -------------------------------------------------------------------------------------------- -->
+	<!-- -------------------------------------------------------------------------------------------- -->
+	<!-- -------------------------------------------------------------------------------------------- -->
+
+
+      <!-- RESULTS & ANALYSIS SECTION -->
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <section id="results">
+      
+      
+        <h2>Cantor Set</h2>
+        <p>
+          Below is the Colab section showcasing the original Cantor Set.
+        </p>
+
+        <figure>
+          <img
+            src="Cantor Set Code.png"
+            alt="Cantor Set Code"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+            Cantor Set Code
+          </figcaption>
+        </figure>
+
+	<p> Cantor Set Code</p>
+	<p> Line 1: this line is polite explanation of the code's intent in lines 2-3. We will be defining libraries for our implementation of math and plotting purposes. </p>
+	<p> Line 2: this line imports the numpy library, which is essential for numerical computations in Python. It's conventionally imported as np for brevity. numpy provides tools for working with arrays and matrices.</p>
+	<p> Line 3: this line imports the pyplot module from the matplotlib library. matplotlib is a popular library for creating visualizations in Python. pyplot is commonly imported as plt and provides functions for creating various types of plots. I've used matlab before, but not much; I've used Maple much more. </p>
+	<p> Line 5: this line is polite description of the code's intent in lines 6-11. Overall this section of code (lines 6-11) defines variables that control the full appearance and structure of the Cantor Set. </p>
+	<p> Line 6: this line sets the starting horizontal (x-coordinate) position of the first bar. </p>
+	<p> Line 7: this line sets the ending horizontal (x-coordinate) position of the first bar. </p>
+	<p> Line 8: this line sets the initial vertical (y-coordinate) position of the first bar.</p>
+	<p> Line 9: this line determines the height of each bar in the set. </p>
+	<p> Line 10: this line controls the vertical distance (distance downwards) between levels of the Cantor Set. </p>
+	<p> Line 11: this line specifies the number of recursive levels to generate, influencing the overall complexity of the generated fractal. </p>
+	<p> Line 13: this is polite description of the intent of the code in lines 14-16. We will be defining a 4-parameter function called cantor_set, making use of 4 previously defined variables: x_start ; x_end ; y_position ; and depth .  </p>
+	<p> Line 14: this line actually defines our 4-parameter function called cantor_set, and is where we make use of our aforementioned 4 defined variables: x_start ; x_end ; y_position ; and depth . </p>
+	<p> Lines 15-16: these two lines define our conditional If statement. This is the base case for the recursion. If depth reaches 0, it means we've reached the desired level of detail, and the function returns an empty list, stopping further recursion. 
+	The function calculates the coordinates for the left and right segments of the Cantor Set at the current level. 
+	It then makes recursive calls to itself to generate segments for the next levels down, adjusting the y_position and depth.
+	Finally, it combines the segments from the current level with the results of the recursive calls, creating a complete set of coordinates for the Cantor Set. <p>
+	<p> Line 18: this line is polite description of the intent of the code in lines 19-20. Specifically, this will be for the left and right segments for the current bar.
+	Basically, this section of the code will be the core of how the Cantor Set pattern is generated. It uses recursion. </p>
+	<p> Line 19: this line defines the left segments of the Cantor Set bar for the current level. left_segment stores the coordinates for the left segment of the bar (the first third). 
+	The variables x_start, x_end, y_position, hold the starting x-coordinate, ending x-coordinate, and y-coordinate (vertical position) of the current bar, as described above. 
+	(x_end - x_start) / 3 will essentially calculate the length of the bar and divides it by 3. This is because the Cantor Set is constructed by repeatedly removing the middle third of each segment.
+	Note that spacing is the space between bars (distance downwards). </p>	
+	<p> Line 20: this line defines the right segments of the Cantor Set bar for the current level. right_segment stores the coordinates for the righ segment of the bar (the last third).
+	The variables x_start, x_end, y_position, hold the starting x-coordinate, ending x-coordinate, and y-coordinate (vertical position) of the current bar, as described previously.
+	(x_end -x_start) / 3 will essentially calculate the length of the bar and divide it by 3. This is because the Cantor Set is constructed by repeatedly removing the middle third of each segment. 
+	Note that spacing is the space between bars (distance downwards). </p>
+	<p> Line 22: this line is polite description of the intent of the code in lines 23-24. Essentially, the cantor_set function calls itself, which is the step recursion. It creates the classic Cantor Set pattern for the left and right segments defined, then goes one level further. </p>
+	<p> Lines 23-24: these lines work similary to lines 19-20, but recursively generate segments for the next levels.
+	Two major differences are as follows: the y_position - spacing moves the next level down vertically; the depth - 1 reduces the overall depth counter, ensuring the recursion eventually stops. </p>
+	<p> Line 26: this line is polite description of the code intent for line 27. Line 27 is an important line, as it is essentially the core of the Cantor Set function.  </p>
+	<p> Line 27: this line uses return, which indicates that the function is going to send a value back to where it was called from. In this case, it's returning a list of segments that make up the Cantor Set at the current level of recursion.
+		Basically, the function combines the segments it calculated for the current level (left_segment, right_segment) with the segments generated by the recursive calls (left_recursive, right_recursive).
+		Therefore, this creates a complete list of segments for the current depth of the Cantor Set pattern and returns it. </p>
+	<p> Line 29: this line is polite description of the intent of the code in line 30. Essentially, we are generating Cantor Set segments data and converting to array for easy plotting in Python. </p>
+	<p> Line 30: in this line, we have aready defined how 4-parameters work for the function, cantor_set. Recall that these 4-parameters are: x_start ; x_end ; y_position ; depth . 
+		np.array(...): here, the result from cantor_set (a list of segments) is passed to the function,  np.array . This function, which comes from the numpy library (imported as np), 
+		converts the list into a NumPy array. NumPy arrays are efficient data structures for numerical computations and are often easier to work with for plotting and other mathematical operations in Python. 
+		Ultimately, this resulting NumPy array is assigned to the variable, segments. This variable now holds the data representing the Cantor Set, which will be used in the subsequent code to create the visualization. </p>
+	<p> Line 32: this line is polite description of the intent of the code in line 33. All we're doing here is plotting/drawing the Cantor Set. </p>
+	<p> Line 33: plt.figure(figsize=(25, 25)) in this line creates a new figure (a blank canvas) for the plot using the matplotlib.pyplot module (imported as plt). 
+		  The function figure() creates the figure object. figsize=(25, 25)  specifies the dimensions of the figure in inches. 
+		  For our purposes, the resulting figure will be 25 inches wide and 25 inches tall, providing a large area for the visualization of the Cantor Set.</p>
+	<p> Line 35: this line is polite description of the intent of the code in lines 36-37. Essentially, we're drawing each segment as a black bar. 
+		This code loops through a set of coordinates and, for each set, draws a black rectangle defined by the coordinates, effectively visualizing the Cantor Set as a series of black bars.</p>
+	<p> Line 36: this line uses a for loop that iterates through each element (segment) within the segments variable (which should contain the coordinates for each segment of the Cantor set). 
+		In each iteration, the loop extracts the: starting x-coordinate (x_start); ending x-coordinate (x_end); and y-coordinate (vertical y), in order to assigns them to the corresponding variables.
+		</p>
+	<p> Line 37: this line is the core of the drawing process. It uses the fill_between() function from matplotlib.pyplot to create a filled rectangle (representing a segment of the Cantor Set).
+		We have multiple arguments for fill_between(). 
+		[x_start, x_end]: Specifies the horizontal range (x-coordinates) of the rectangle.
+		[y] * 2: Defines the upper y-coordinate of the rectangle. [y] * 2 creates a list [y, y] because fill_between expects a list of y-values for the upper bound, even though it's constant in this case.
+		[y - bar_height] * 2: Defines the lower y-coordinate of the rectangle (bar_height pixels below the y). Similar to the previous argument, it's duplicated to match the expected input format.
+		color="black": Sets the fill color of the rectangle to black. We could easily modify this to change to another color, like blue. </p>
+	<p> Line 39: this line is polite description of the code in lines 40-41. We're basically just hiding the plot axes for a cleaner appearance (we don't want to detract from the fractal effect of the Cantor Set with unnecessary lines). </p>
+	<p> Line 40: this line uses the matplotlib.pyplot module (imported as plt) to control the appearance of the plot. plt.axis('off'): This function call is used to hide the axes of the plot. 
+		The axes include the x-axis and y-axis lines, ticks, and labels. By setting the axis to 'off', we remove these elements, leaving only the visualized data. 
+		This is done for a cleaner, more focused visualization, especially when the context of the axes isn't crucial for understanding the data. </p>
+	<p> Line 41: this line uses plt.show(). This is a crucial function in matplotlib and works similarly to show() in Python's turtle graphics. 
+		It displays the plot that has been created up to this point in the code. Without this line, the plot would be generated but not shown on your screen. </p>		      
+	<figure>
+          <img
+            src="Cantor Set Image.png"
+            alt="Cantor Set Image"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Image
+	  </figcaption>
+        </figure>
+
+<h2>Cantor Set Variations</h2>
+	      
+<p> We can modifiy the code provided in the previous section to produce variations. 
+For example, we can simply change the variables right_segment, left_segment, right_recursive, left_recursive 
+to implement division by 4, instead of 3 as in the standard Cantor Set, to generate slightly smaller bars. This is shown below.
+Note that no other modifications to the code have been made other than the aforemntioned division by 4. </p>
+	      
+<figure>
+          <img
+            src="Cantor Set Image 1.png"
+            alt="Cantor Set Image 1"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Variation 1, Division by 4
+	  </figcaption>
+        </figure>
+
+<figure>
+          <img
+            src="Cantor Set Code 1.png"
+            alt="Cantor Set Code 1"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Variation 1, Associated Code
+	  </figcaption>
+        </figure>
+
+<p> We can perform a larger division, such as by 9, yielding even smaller bars. </p>
+	      
+	      
+<figure>
+          <img
+            src="Cantor Set Image 2.png"
+            alt="Cantor Set Image 2"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Variation 2, Division by 9
+	  </figcaption>
+        </figure>
+
+<figure>
+          <img
+            src="Cantor Set Code 2.png"
+            alt="Cantor Set Code 2"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Variation 2, Associated Code
+	  </figcaption>
+        </figure>
+
+<p> Now, suppose we want to make additional changes to the code to yield stranger variations. 
+    We start by leaving division by 3 for variables right_segment and left_segment, but change the recursion 
+    from division by 3 to multiplication by 2/3 by altering the variables right_recursive and left_recursive. 
+    Additionally, we will add levels to draw by changing initial depth of 6 to 10. This gives us the interesting image below. </p>
+
+<figure>
+          <img
+            src="Cantor Set Image 3.png"
+            alt="Cantor Set Image 3"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Variation 3
+	  </figcaption>
+        </figure>	      
+	      
+<figure>
+          <img
+            src="Cantor Set Code 3.png"
+            alt="Cantor Set Code 3"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Variation 3, Associated Code
+	  </figcaption>
+        </figure>
+
+	      <p>Now, the variable spacing, as seen in line 10, actually plays a significant part in the final image. 
+	      Spcaing is the space between formulated bars, so by decreasing spacing from 10 to 3, we get significantly
+	      closer bars, as seen in the image below. Notice that only spacing has been altered here, and not our 
+	      right or left line segments numbers, recursive or otherwise. </p>
+	      
+<figure>
+          <img
+            src="Cantor Set Image 4.png"
+            alt="Cantor Set Image 4"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Variation 4
+	  </figcaption>
+        </figure>	      
+	      
+<figure>
+          <img
+            src="Cantor Set Code 4.png"
+            alt="Cantor Set Code 4"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Variation 4, Associated Code
+	  </figcaption>
+        </figure>
+
+
+<p> We've shown that our base Cantor Set can visually change by slightly modifying line segment values and spacing,
+    but we can get really wild by simultaneously altering these values with color changes! </p>
+	      
+<figure>
+          <img
+            src="Cantor Set Image 5.png"
+            alt="Cantor Set Image 5"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Variation 5
+	  </figcaption>
+        </figure>	      
+	      
+<figure>
+          <img
+            src="Cantor Set Code 5.png"
+            alt="Cantor Set Code 5"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Variation 5, Associated Code
+	  </figcaption>
+        </figure>	      
+
+<figure>
+          <img
+            src="Cantor Set Image 6.png"
+            alt="Cantor Set Image 6"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Variation 6
+	  </figcaption>
+        </figure>	      
+	      
+<figure>
+          <img
+            src="Cantor Set Code 6.png"
+            alt="Cantor Set Code 6"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Cantor Set Variation 6, Associated Code
+	  </figcaption>
+        </figure>	      
+
+	      
+<h2> Cantor Set and Sierpinski Carpet</h2>      
+<p>   A two-dimensional fractal, commonly referred to as the Sierpinski Carpet, has a strong relationship to the Cantor Set (Sierpinski Carpet). Instead of trisecting a line segment, removing the middle section, and repeating the process as in the Cantor Set, the Sierpinski Carpet is formed through the division of 
+	a square into nine smaller squares, with the middle square removed (Cantor Set, Sierpinski Carpet). Remaining squares are then subdivided into nine each, again removing the middle square; this process can continue 
+	infinitely like the Cantor Set (Cantor Set, Sierpinski Carpet). </p>
+
+<figure>
+          <img
+            src="Lab Module 3 Sierpinski Carpet Result.png"
+            alt="Lab Module 3 Sierpinski Carpet Result"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+             Sierpinski Carpet
+          </figcaption>
+        </figure>      
+
+	      
+	      <figure>
+          <img
+            src="Lab Module 3 Sierpinski Carpet Code.png"
+            alt="Lab Module 3 Sierpinski Carpet Code"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+             Sierpinski Carpet Code
+          </figcaption>
+        </figure>	      
+
+<p> Important Note: this is the code for creating a Sierpinski Carpet using Python's Turtle Graphics, but in order for it to function in Colab, we would also need to install the associated turtle library. To save time, space, and maintain focus on the Cantor Set, we will not include the image of the library. </p>	      
+<p> Line 1: we use # to begin a brief description of our following code for the Sierpinski Carpet; particularly, a Sierpinski Carpet of order 4. </p>
+<p> Line 2: initializeTurtle() is the function call that sets up the drawing environment for the turtle, i.e., the drawing canvas. </p>
+<p> Line 3: showturtle() reveals the turtle icon, enabling visualization of the turtle’s movement/position. </p>
+<p> Lines 5-8: this is analogous to the code used in the equilateral triangle creation. </p>
+<p> Line 5: we use def to define a function called draw_square that has one parameter, called length. Length will be the overall size of the generated square. </p>
+<p> Line 6: we start a for loop in given range. This means the loop will run a set number of times, as specified in the range. Here, since we have for _ in range(4): , the loop will run 4 times total before stopping (which is logical, since a square has four equal sides). </p> 
+<p> Line 7: the function forward() is called to move the turtle by the specified length; specifying length will occur in line 26. </p>	   
+<p> Line 8: the function left() is used to swivel the turtle by the given degrees after the turtle completes its specified length; since we have left(90), our turtle will rotate left by a 90 angle after concluding said distance. This is logical, since a square is formed of 4 angles, each of which is 90 degrees. </p>
+<p> Line 11: we use def to define a function called sierpinski_carpet with two parameters, length and order. Length represents the function’s line length; in this case, the square's length. Order determines the associated drawn line’s complexity, i.e., the overall complexity of the Sierpinski Carpet. </p>
+<p> Lines 12-13: begins an if statement (conditional statement) with the base case condition that when order == 0 is met, the turtle will move forward by its given length. Note that == is the comparison operator. In other words, if order is 0, then turtle simply draws the square function defined earlier (with accompanied given length, of course).</p>
+<p> Line 14: this begins the else component of our if statement, which occurs when the given base case is not met, i.e., when order is not 0. </p>
+<p> Line 15: starts the for loop in range (4) </p>
+<p> Line 16: the Sierpinski Carpet fundamentally contains smaller squares within squares, namely 9 per square. This line of code initiates the first smaller square within the defined sierpinski function, sierpinski_carpet(length / 3, order -1). Here, current length is reduced by one-third using the mathematical division operator, and order is reduced by 1. </p>
+<p> Line 17: the function forward() moves the turtle forward, in this case by length / 3. </p>
+<p> Line 18: draws the second smaller square, similarly to line 15. </p>
+<p> Line 19: the function forward() moves the turtle forward, in this case by length / 3. </p>
+<p> Line 20: the function forward() moves the turtle forward, in this case by length / 3. </p>
+<p> Line 21: the left() function rotates the turtle left by the given degrees. In this case, left(90) rotates the turtle 90 degrees to the left (a right angle). No movement is made, only rotation.</p>
+<p> Line 23: jump(x,y) is the function that moves the turtle to the specified x-y coordinates on the canvas without drawing any line. Here, we start at jump(300,500). </p>
+<p> Line 24: face() is a function that points the turtle in a specific direction; here, face(90) points the turtle North. </p>
+<p> Line 25: color() is the function that specifies the line color; here, color(‘aqua’) specifies line color to be aqua (a pretty blue). </p>
+<p> Line 26: length is the variable that sets the line length. This will be the overall size of the generated sierpinski carpet (smaller numbers will yield smaller sierpinski carpets, whereas larger numbers will yield larger sierpinski carpets). Here, our length is 400. </p>
+<p> Line 27: order is the variable used to assign different complexity values to the sierpinski carpet; higher order yields greater complexity and thus a more intricate pattern of the fractal overall. Here, the order is 4. </p>
+<p> Line 28: the recursive function sierpinski_carpet is called to finally draw the sierpinski carpet with its associated two parameters, length and order, variables assigned in lines 26 and 27, respectively. /p>
+<p> Line 30: show() displays the final result, i.e., our Sierpinski Carpet. </p>
+	      
+	      
+		
+      </section>
+
+      <!-- CONCLUSION SECTION -->
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <!-- -------------------------------------------------------------------------------------------- -->
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        
+	<p> In this module report, we successfully described the Cantor Set discovered by mathematician Henry John Stephen Smith, which was made
+		famous by the more well-known set theory founder, Georg Cantor. We elucidated the 41-line Python code written to create the Cantor Set function and thus generate
+		images showcasing its properties. We then modified the code to formulate new variations of the Cantor Set to showcase their generated images. Of particular interest was
+		a variation known as the Sierpinski Carpet, which is subdivided into 9 smaller entities instead of 3 smaller entities as in the Cantor Set. This
+		minimization process through successive iterations, when represented pictorially with powerful computer coding like Python, clearly showcases the simulated Infinite Dust entitling this module.  </p>
+
+	  <h2>Works Cited (MLA)</h2>    
+
+
+<p> Barile, Margherita and Weisstein, Eric W. "Cantor Set." From MathWorld—A Wolfram Web Resource. https://mathworld.wolfram.com/CantorSet.html </p>
+
+<p> “Cantor set.” Wikipedia, Wikimedia Foundation, 2 March 2025, https://en.wikipedia.org/wiki/Cantor_set </p>
+
+<p> “Georg Cantor.” Wikipedia, Wikimedia Foundation, 16 March 2025, https://en.wikipedia.org/wiki/Georg_Cantor </p>
+
+<p> “Henry John Stephen Smith.” Wikipedia, Wikimedia Foundation, 5 October 2024, https://en.wikipedia.org/wiki/Henry_John_Stephen_Smith </p>
+
+<p> "Sierpinski carpet." Wikipedia, Wikimedia Foundation, 28 September 2024, https://en.wikipedia.org/wiki/Sierpi%C5%84ski_carpet </p>
+	      
+      </section>
+
+     
+     
+     
+   
+     
+     
+     
+  </main>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>
