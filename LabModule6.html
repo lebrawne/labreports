@@ -394,32 +394,6 @@
           </figcaption>
         </figure>	      
 
-<p> Important Note: this is the code for creating a Sierpinski Carpet using Python's Turtle Graphics, but in order for it to function in Colab, we would also need to install the associated turtle library. To save time, space, and maintain focus on the Cantor Set, we will not include the image of the library. </p>	      
-<p> Line 1: we use # to begin a brief description of our following code for the Sierpinski Carpet; particularly, a Sierpinski Carpet of order 4. </p>
-<p> Line 2: initializeTurtle() is the function call that sets up the drawing environment for the turtle, i.e., the drawing canvas. </p>
-<p> Line 3: showturtle() reveals the turtle icon, enabling visualization of the turtle’s movement/position. </p>
-<p> Lines 5-8: this is analogous to the code used in the equilateral triangle creation. </p>
-<p> Line 5: we use def to define a function called draw_square that has one parameter, called length. Length will be the overall size of the generated square. </p>
-<p> Line 6: we start a for loop in given range. This means the loop will run a set number of times, as specified in the range. Here, since we have for _ in range(4): , the loop will run 4 times total before stopping (which is logical, since a square has four equal sides). </p> 
-<p> Line 7: the function forward() is called to move the turtle by the specified length; specifying length will occur in line 26. </p>	   
-<p> Line 8: the function left() is used to swivel the turtle by the given degrees after the turtle completes its specified length; since we have left(90), our turtle will rotate left by a 90 angle after concluding said distance. This is logical, since a square is formed of 4 angles, each of which is 90 degrees. </p>
-<p> Line 11: we use def to define a function called sierpinski_carpet with two parameters, length and order. Length represents the function’s line length; in this case, the square's length. Order determines the associated drawn line’s complexity, i.e., the overall complexity of the Sierpinski Carpet. </p>
-<p> Lines 12-13: begins an if statement (conditional statement) with the base case condition that when order == 0 is met, the turtle will move forward by its given length. Note that == is the comparison operator. In other words, if order is 0, then turtle simply draws the square function defined earlier (with accompanied given length, of course).</p>
-<p> Line 14: this begins the else component of our if statement, which occurs when the given base case is not met, i.e., when order is not 0. </p>
-<p> Line 15: starts the for loop in range (4) </p>
-<p> Line 16: the Sierpinski Carpet fundamentally contains smaller squares within squares, namely 9 per square. This line of code initiates the first smaller square within the defined sierpinski function, sierpinski_carpet(length / 3, order -1). Here, current length is reduced by one-third using the mathematical division operator, and order is reduced by 1. </p>
-<p> Line 17: the function forward() moves the turtle forward, in this case by length / 3. </p>
-<p> Line 18: draws the second smaller square, similarly to line 15. </p>
-<p> Line 19: the function forward() moves the turtle forward, in this case by length / 3. </p>
-<p> Line 20: the function forward() moves the turtle forward, in this case by length / 3. </p>
-<p> Line 21: the left() function rotates the turtle left by the given degrees. In this case, left(90) rotates the turtle 90 degrees to the left (a right angle). No movement is made, only rotation.</p>
-<p> Line 23: jump(x,y) is the function that moves the turtle to the specified x-y coordinates on the canvas without drawing any line. Here, we start at jump(300,500). </p>
-<p> Line 24: face() is a function that points the turtle in a specific direction; here, face(90) points the turtle North. </p>
-<p> Line 25: color() is the function that specifies the line color; here, color(‘aqua’) specifies line color to be aqua (a pretty blue). </p>
-<p> Line 26: length is the variable that sets the line length. This will be the overall size of the generated sierpinski carpet (smaller numbers will yield smaller sierpinski carpets, whereas larger numbers will yield larger sierpinski carpets). Here, our length is 400. </p>
-<p> Line 27: order is the variable used to assign different complexity values to the sierpinski carpet; higher order yields greater complexity and thus a more intricate pattern of the fractal overall. Here, the order is 4. </p>
-<p> Line 28: the recursive function sierpinski_carpet is called to finally draw the sierpinski carpet with its associated two parameters, length and order, variables assigned in lines 26 and 27, respectively. /p>
-<p> Line 30: show() displays the final result, i.e., our Sierpinski Carpet. </p>
 	      
 	      
 		
