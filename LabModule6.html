@@ -37,15 +37,9 @@
       <section id="introduction">
         <h2>Introduction</h2>
         <p>
-        This module concentrates on what is called the Cantor Set, which is also known as the Cantor comb or no middle third set (Barile). 
-	The Cantor Set was originally founded by Irish mathematician, Henry John Stephen Smith, in 1874, but received
-	its notoriety due to the more famous German mathematician, Georg Cantor (Cantor Set, Smith). Georg Cantor's 10-year work from
-	1874 to 1884 is widely considered to be the origin of modern set theory (Georg Cantor). In addition to becoming the father of set theory, 
-	Georg Cantor helped lay the foundation of modern point-set topology (Cantor Set). Module 5 focuses on what is referred to as the Cantor Ternary Set. 
-	Fundamentally, the Cantor Ternary Set is formulated by trisecting a line segment and removing its middle third, thus creating two shorter line segments (Cantor Set). 
-	This process can infinitely repeat, hence its focus on recursion for its formation in Python coding. 
-	Interestingly, the Cantor Ternary Set's complement is referred to as a fractal string, which we explore further in the next sections (Cantor Set). Finally,
-	we will discuss the Cantor Set's relation to a famous fractal called the Sierpinski Carpet (Cantor Set, Sierpinski Carpet). 
+        This module focuses on the creation of grids of points using Python coding; we can use transformation of functions
+	to manipulate grid overall shape, simultaneoulsy creating interesting and highly intricate patterns based on relatively 
+	simple function rules. We will further demonstrate this by generating unique variations.
 	</p>
 
         <figure>
@@ -97,26 +91,55 @@
           </figcaption>
         </figure>
 
-	 <p> Line 1: </p>
-	 <p> Line 2: </p>
-	 <p> Line 4: </p>
-	 <p> Line 5: </p>
- 	 <p> Line 6: </p>
-	 <p> Line 7: </p>
-	 <p> Line 8: </p>
-	 <p> Line 9: </p>
-	 <p> Line 11: </p>
-	 <p> Line 12: </p>
-	 <p> Line 13: </p>
-	 <p> Line 14: </p>
- 	 <p> Line 15: </p>
-	 <p> Line 16: </p>
-	 <p> Line 17: </p>
-	 <p> Line 19: </p>
-	 <p> Line 20: </p>
-	 <p> Line 22: </p>
-	 <p> Line 23: </p>
-	 <p> Line 24: </p>
+	 <p> Line 1: this line uses import to install our first library used for our code written in lines 5-23. 
+			numpy, which is imported as np, is a fundamental library specifically for numerical operations in Python, 
+			particularly used for working with arrays and matrices. This will be useful when we generate our rows and
+	 		columns of colored dots. </p>
+	 <p> Line 2: this line uses import to install our second library used for our code written in lines 5-23.
+			matplotlib.pyplot, which is imported as plt, is a common library used in creating static, interactive, 
+		 	and animated visualizations in Python. Similar to numpy, using plt makes the code cleaner and easier to read. </p>
+	 <p> Line 4: this line is polite description of the intent of the code in lines 5-9. Essentially, we will be creating a a simple 2D 
+		 	grid of points using the library, NumPy. This function will create a grid of points within a square area spanning from -1 to 1 
+		 	on the x and y axes (2-Dimensional). The size parameter controls the density of the points in the grid. 
+		 	More points will generate with a larger size, thus creating a denser grid.</p>
+	 <p> Line 5: this line defines a function named generate_grid that takes one input argument: size. 
+		 	This size argument will determine how many points are created along each dimension of the grid. </p>
+ 	 <p> Line 6: this line defines a function, np.linspace, which comes from the NumPy library (np) and generates a sequence of evenly spaced numbers within a specified range.
+	 		The -1, 1 specifies the start and end points of our range. So in this case, the sequence of numbers will be generated between -1 and 1.
+		 	size will determine overall the number of points to generate within our range. Finally, our result will be stored in variable x, 
+		 	which logically will represent the x-coordinates of the grid points. </p>
+	 <p> Line 7: this line does the same thing as the previous one but stores the results in the variable y, representing the y-coordinates of the grid points. </p>
+	 <p> Line 8: this line creates the function np.meshgrid, which takes two 1D arrays (like our x and y) to create two 2D arrays representing the x and y coordinates of 
+		 	all grid points. The final result is stored in the variable grid, which now contains the complete 2D grid of points. </p>
+	 <p> Line 9: this line uses return to return the formulated grid, making it available for use outside of the function. </p>
+	 <p> Line 11: this line is polite description of the code's intention for lines 12-17.Essentially, this upcoming set of lines sets up the visualization. </p>
+	 <p> Line 12: this line uses def to define the one-parameter function, plot_grid. Now, note that (grid) represents our 2 dimensional grid of points. 
+		 	Visually, it will be a tuple containing two NumPy arrays, one for the x-coordinates and one for the y-coordinates. </p>
+	 <p> Line 13: this line is interesting, as it actually separates the grid tuple into two variables: x_grid and y_grid. Ultimately,
+		 	this will result in more understandable code that is easier to work with. 
+		 	x_grid will, logically, hold the x-coordinates of the grid points, and y_grid, logically, will hold the y-coordinates.</p>
+	 <p> Line 14: this line uses matplotlib.pyplot module (imported as plt) to create a new figure.
+			figsize=(10, 10) sets the size of the figure to be 10 inches by 10 inches. Note that we can alter these values, if desired, to change the overall figure size. </p>
+ 	 <p> Line 15: this line uses plt.scatter , the function from matplotlib.pyplot used to create scatter plots. 
+	 		x_grid and y_grid both provide data points used in the plot.
+			s=1 sets the size of the points in the scatter plot to be very small (1 point). 
+			color='blue' makes the points blue. </p>
+	 <p> Line 16: this long line simply creates the plot's title. It uses an f-string to dynamically create the title text, including the dimensions of the grid based on the length of the x_grid and y_grid arrays. 
+	 		{len(x_grid)}: is the part that calculates the length of the x_grid using the len() function and inserts it into the string. x_grid represents the x-coordinates of the grid points. 
+			x is just the character "x", used here to visually separate grid dimensions in the title.
+			{len(y_grid)}: this works like x_grid, and calculates the length of y_grid (the y-coordinates) and inserts it into the string. 
+ 			plt.title() is the function that sets the title of the plot. </p>
+	 <p> Line 17: this line simply displays the created plot to the user. It's essential to use plt.show() for actually seeing the visualization. </p>
+	 <p> Line 19: this line is polite description of the intent of the code in line 20, which will basically set the size of the grid. </p>
+	 <p> Line 20: This line creates a variable called size and assigns it to a value, in this case, 50. 
+		 	This size variable will control how many points are generated in each dimension of the grid (both x and y). We can alter it at will. </p>
+	 <p> Line 22: this line is polite description of the code's intent in lines 23-24. Basically, these lines will both generate and plot the 2D grid of points and then visualizes it using a scatter plot. </p>
+	 <p> Line 23: this line calls the generate_grid function, which we defined in lines 5-9. It passes the size variable, currently set at 50, as an argument.
+			The generate_grid function creates a 2D grid of points and returns it.
+			The returned grid is then stored in the grid variable. </p>
+	 <p> Line 24: this line calls the plot_grid function, which was defined in lines 12-17. It passes the grid, created in line 23, as an argument.
+	 		The plot_grid function takes this grid and displays it as a scatter plot using matplotlib.pyplot.
+			Each point on the grid is represented as a small blue dot. The plot includes a title indicating the size of the grid. </p>
 	      
 	<figure>
           <img
