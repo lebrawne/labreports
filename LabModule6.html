@@ -224,12 +224,18 @@
 	  </figcaption>
         </figure>
 
-	 <p> Line 1: </p>
-	 <p> Line 2: </p>
-	 <p> Line 4: </p>
-	 <p> Line 5: </p>
-	 <p> Line 7: </p>
-	 <p> Line 8: </p>	
+	 <p> Line 1: this line is polite description of the intent of the code in line 2. Basically, we are going to set the number of iterations we want to do. </p>
+	 <p> Line 2: this line contains the variable, iterations, and currently has the variable set at 2, though we can easily change this.
+	 	 	the iterations variable will generate the number of transformations performed on the x,y points within our grid.	</p>
+	 <p> Line 4: this line is polite description of the code's intent in line 5. Basically, we will be applying our iterative transformation function. This will use the
+	 		iterations variable and its associated value as discussed in line 4, as well as aforementioned coding, such as the grid variable iterative_transform function. </p>
+	 <p> Line 5: this line is essentially creating a new variable called fractal_grid. The right hand side of this new variable stores the function iterative_transform(grid, iterations), which 
+			was created earlier in another block of code. This is a 2-parameter function, with parameters grid and iterations. grid is variable storing the original grid of points of the transformation.
+			iterations is the variable controling how many times the transformation is applied, currently 2. Successive terations modifies the points, yielding a more sophisticated, and thus more interesting, fractal.
+	 		</p>
+	 <p> Line 7: this line is polite description of the code's intent in line 8. Basically, we're at the final stage to plot our fractal grid.</p>
+	 <p> Line 8: this line implements the plot_grid function on the variable created in line 5, fractal_grid. This enables us to showcase the transformed grid, and shows a scatter plot of x,y points after the set number of transformations have been performed.
+</p>	
 	      
 <figure>
           <img
@@ -259,13 +265,14 @@
 	  </figcaption>
         </figure>	      
 	 
-	 
-	 <p> Line 1: </p>
-	 <p> Line 2: </p>
-	 <p> Line 4: </p>
-	 <p> Line 5: </p>
-	 <p> Line 7: </p>
-	 <p> Line 8: </p>	
+<p>The code in this code block works precisely the same as described in the previous section, but with one minor difference. The iterations variable in line 2 is
+	set to store 3 instead of 2, i.e., iterations = 3 instead of iterations = 2. This means that we are performing an additional transformation, 
+	which will yield a more sophisticated looking fractal in the form of dots on a scatterplot and thus a variety of fractal dot patterns reminiscent of an ink-blot test.
+	At first glance, setting iterations at 3 instead of 2 appears to do litle to change the pattern overall; however, further inspection reveals numerous altered details. The additional
+	iteration seems to have flipped the image, leaving a triangular open space on the right hand side of the grid instead of the left hand side. Dots appear to be more widespread, although 
+	maintaining a clear pattern; further inspection reveals that this initial speculation is correct, as the grid has a (labeled) x-axis of -5 to 10 as opposed to 
+	the previous a-axis of -4 to 2, as well as a larger (labeled) y-axis of -15 to 15 instead of a y-axis of -3 to 3. This implies that the heavy concentration of dots section is actually larger
+	in diameter with iterations = 3 compared to iterations = 2. </p>
 	      
 	<figure>
           <img
