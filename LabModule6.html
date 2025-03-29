@@ -303,119 +303,91 @@ I believe FAU’s Dr. Richard Voss worked under Benoit Mandelbrot, and created f
         </figure>
 
 <h2>Unique Variations</h2>	    
-	      
+	  <p> Below are unique variations resulting from alteration of the code discussed in the previous section. </p>    
 <figure>
           <img
-            src="Cantor Set Image 4.png"
-            alt="Cantor Set Image 4"
+            src="Variation 1 Code.png"
+            alt="Variation 1 Code"
             width="500"
             height="500"
             loading="lazy"
           />
           <figcaption>
-		Cantor Set Variation 4
+		Variation 1 Code
 	  </figcaption>
         </figure>	      
+
+<p> In this example, we have simply modified the original base plotting code shown in Figure 1 in the previous section. 
+	We have altered the boundaries of where the points (the number of which will be variable size) will generate on the x,y graph in lines 6-7. 
+	We have changed the figure size in line 14, increasing x to a maximum of 15 and decreasing y to a maximum of 5;
+	note that 15 does not actually show up visibly on the graph unless we alter x in line 6 from its maximum of 1 to a maximum of 15. This further 
+	demonstrates the connection between lines 6-7 and line 14, better showcasing what the code generates. 
+	In line 15, we enlarged the overall point size from s=1 to s=100; here, we also changed color from blue to orange.
+	Finally, in line 20, we made the grid sparser by decreasing size=50 to size=10. The resulting image with these modifications is below. </p>
 	      
 <figure>
           <img
-            src="Cantor Set Code 4.png"
-            alt="Cantor Set Code 4"
+            src="Variation 1 Image.png"
+            alt="Variation 1 Image"
             width="500"
             height="500"
             loading="lazy"
           />
           <figcaption>
-		Cantor Set Variation 4, Associated Code
+		Variation 1 Image
 	  </figcaption>
         </figure>
 
+<p> Interestingly, changes to the base code will affect our iterative_transform function formed in the original second code block.
+	Without making changes to the associated iterative_transform code, we can see these changes in the image below. </p>
+	      
 	      
 <figure>
           <img
-            src="Cantor Set Image 5.png"
-            alt="Cantor Set Image 5"
+            src="Variation 1.1 Image.png"
+            alt="Variation 1.1 Image"
             width="500"
             height="500"
             loading="lazy"
           />
           <figcaption>
-		Cantor Set Variation 5
-	  </figcaption>
-        </figure>	      
-	      
-<figure>
-          <img
-            src="Cantor Set Code 5.png"
-            alt="Cantor Set Code 5"
-            width="500"
-            height="500"
-            loading="lazy"
-          />
-          <figcaption>
-		Cantor Set Variation 5, Associated Code
+		Variation 1.1 Image, iterative_transform function
 	  </figcaption>
         </figure>	      
 
-<figure>
-          <img
-            src="Cantor Set Image 6.png"
-            alt="Cantor Set Image 6"
-            width="500"
-            height="500"
-            loading="lazy"
-          />
-          <figcaption>
-		Cantor Set Variation 6
-	  </figcaption>
-        </figure>	      
+<p>Expectedly, changes to the base code will impact our fractal_grid function; our first image below showcases 2 iterations, 
+	whereas our second image below showcases 3 iterations. </p>      
 	      
 <figure>
           <img
-            src="Cantor Set Code 6.png"
-            alt="Cantor Set Code 6"
+            src="Variation 1.2 Image.png"
+            alt="Variation 1.2 Image"
             width="500"
             height="500"
             loading="lazy"
           />
           <figcaption>
-		Cantor Set Variation 6, Associated Code
+		Variation 1.2 Image, fractal_grid function with 2 iterations
 	  </figcaption>
         </figure>	      
 
-	      
-<h2> Cantor Set and Sierpinski Carpet</h2>      
-<p>   A two-dimensional fractal, commonly referred to as the Sierpinski Carpet, has a strong relationship to the Cantor Set (Sierpinski Carpet). Instead of trisecting a line segment, removing the middle section, and repeating the process as in the Cantor Set, the Sierpinski Carpet is formed through the division of 
-	a square into nine smaller squares, with the middle square removed (Cantor Set, Sierpinski Carpet). Remaining squares are then subdivided into nine each, again removing the middle square; this process can continue 
-	infinitely like the Cantor Set (Cantor Set, Sierpinski Carpet). </p>
-
 <figure>
           <img
-            src="Lab Module 3 Sierpinski Carpet Result.png"
-            alt="Lab Module 3 Sierpinski Carpet Result"
+            src="Variation 1.3 Image.png"
+            alt="Variation 1.3 Image"
             width="500"
             height="500"
             loading="lazy"
           />
           <figcaption>
-             Sierpinski Carpet
-          </figcaption>
-        </figure>      
-
-	      
-	      <figure>
-          <img
-            src="Lab Module 3 Sierpinski Carpet Code.png"
-            alt="Lab Module 3 Sierpinski Carpet Code"
-            width="500"
-            height="500"
-            loading="lazy"
-          />
-          <figcaption>
-             Sierpinski Carpet Code
-          </figcaption>
+		Variation 1.3 Image, fractal_grid function with 3 iterations
+	  </figcaption>
         </figure>	      
+	      
 
+    
+
+	   
 	      
 	      
 		
