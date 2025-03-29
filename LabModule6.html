@@ -53,7 +53,6 @@ Benoit Mandelbrot’s discovery began with his strong desire to uncover somethin
 Vivaldi states that the beauty of fractals lies in their creation through simple formulas rather than complex/exotic ones. He further explains that these relatively easy formulas were learned by most people in school. Mandelbrot unlocked the dynamic side of geometry using iteration—i.e., feedback. Vivaldi demonstrates this concept using a parabola and an old computer. He emphasizes the use of complex numbers for 2-D image modeling. He mentions the importance of discovering the Julia Set, which is actually a set of related shapes (there are an infinite number of them). Mandelbrot famously divided the massive Julia Set into two families: those made of a single piece; and those integrated into infinitely many fragments. Eventually, he found the Mandelbrot Set, a complete library of Julia Sets in which every miniscule detail represents a Julia Set. Mandelbrot spent many nights creating pictures of his discovery, repeatedly emphasizing that it was a time of simultaneous fatigue and joy in his life. Colleagues of Mandelbrot have since explored higher dimensions, such as Alan Norton. Norton initially considered these fractals as decorative, and hoped to discover a real-world purpose for them—naturally, doing so required studying higher dimensions. He believed that these fractal images were just a slice, or snapshot, of a higher-dimensional topology, particularly concentrating on the 4th dimension, what is currently believed to be the dimension human beings exist in.
 
 Interestingly, narrator Vivaldi showcases trees (even going so far as having a bonsai plant sitting on his desk). He briefly mentions basic rules behind plant development, specifically: stems; leaves; and flowers. Dr. Brian Goodwin substantiates Vivaldi’s contention on plant growth, stating the biconditional argument that “…the process is the form and the form is the process.” Evolution is an equivalent exploration of rules of this kind, enabling us to determine which forms are either possible or impossible to generate in biological systems.
-Iterations are a powerful tool implemented in understanding complex shapes and the evolution process of shapes into new forms. What lies at the heart of fractals is iterations, which use simple rules to yield fantastically complex final products. 
 
 I believe FAU’s Dr. Richard Voss worked under Benoit Mandelbrot, and created famous computerized fractal images.
 </p>
@@ -566,6 +565,77 @@ I believe FAU’s Dr. Richard Voss worked under Benoit Mandelbrot, and created f
         </figure>			
 
 <h4>Unique Variations 4</h4>
+
+	<p> In our final example, we have once more modified the original base plotting code, again only slightly, but with a significant detail.
+	In line 15, we raised overall point size from s=1 to s=5; here, we also changed color from blue to red.
+	In line 20, we raised grid density from size=50 to size=1000. The resulting grid is below. </p>
+	      
+<figure>
+          <img
+            src="Variation 4 Image.png"
+            alt="Variation 4 Image"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Variation 4 Image
+	  </figcaption>
+        </figure>
+
+<p> Now, it appears we have created too many dots for our grid space. However, when 1 iteration is performed, we will actually generate an interesting fractal image.
+	This showcases how computerized graphics have aided in the discovery of highly complex patterns otherwise unattainable by human hands alone. </p>
+	      
+	      
+<figure>
+          <img
+            src="Variation 4.1 Code.png"
+            alt="Variation 4.1 Code"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Variation 4.1 Code, iterative_transform function with 1 iteration
+	  </figcaption>
+        </figure>	      
+
+<p> Here, we have altered our original iterative_transform function in line 5. 
+	We have changed our z variable from z = z ** 2 - 0.5 to z = -z ** 30 - 3 (note that ** represents exponents in Python).
+	Below is our resulting image. This image showcases how simple changes to the function can yield complex computerized images, 
+	as elucidated in the informative associated module video discussed in the Introduction section. </p>
+	      
+<figure>
+          <img
+            src="Variation 4.1 Image.png"
+            alt="Variation 4.1 Image"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Variation 4.1 Image, fractal_grid function with 1 iteration
+	  </figcaption>
+        </figure>	      
+<p>Below, we have the resulting image after 2 iterations. Now, what makes this image different from Unique Transformation 3
+is that Python cannot perform a 3rd iteration. Why? Under current conditions, we receive a ValueError in which Python cannot compute length.
+This detail is useful in the inclusion of this module, as it showcases the importance of specifying intial conditions and potential limitations 
+to powerful programming languages. For example, overflow and underflow are generally much more apparent problems in Microsoft Excel than in Python. </p>
+<figure>
+          <img
+            src="Variation 4.2 Image.png"
+            alt="Variation 4.2 Image"
+            width="500"
+            height="500"
+            loading="lazy"
+          />
+          <figcaption>
+		Variation 4.2 Image, fractal_grid function with 2 iterations
+	  </figcaption>
+        </figure>	      
+		
+
+	      
       </section>
 
       <!-- CONCLUSION SECTION -->
@@ -576,7 +646,10 @@ I believe FAU’s Dr. Richard Voss worked under Benoit Mandelbrot, and created f
       <section id="conclusion">
         <h2>Conclusion</h2>
         
-	<p> In this module report, we successfully  </p>
+	<p> In this module report, we successfully showcase the idea that iterations are a powerful tool implemented in understanding complex shapes and the evolution process of shapes into new forms.
+		What lies at the heart of fractals is iterations, which use simple rules to yield fantastically complex final products. Advancements in technology, particularly programming, enable us to perform successive iterations 
+		that are impossible to do by hand. Consequently, this enables the production of intricate shapes that inspire mathematicians and scientists to explore new patterns and attempt to picture objects in higher dimensions 
+		for stronger understanding of realms we know exist but cannot currently see.  </p>
 
 	  <h2>Works Cited (MLA)</h2>    
 
