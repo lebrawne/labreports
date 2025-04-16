@@ -66,7 +66,55 @@
           </figcaption>
         </figure>
 
-        <figure>
+<p>Lines 1-3: these lines import 3 libraries implemented in creating the mandelbrot function. </p>
+<p>Line 1: we import NumPy, a library for numerical computations in Python that provides tools for working with arrays, matrices, and mathematical functions. </p>
+<p>Line 2: we import pyplot module from the Matplotlib library. pyplot provides a simple interface for formulating different types of plots, including line plots, scatter plots, and images.
+	Matplotlib is a library for creating visualizations in Python. </p>
+<p>Line 3: Numba is a just-in-time (JIT) compiler for Python that has the potential to speed up numerical computations, especially within loops.
+The jit decorator marks functions for optimization by its associated library, Numba.</p>
+<p>Lines 5-13: this block of code develops our mandelbrot function which will be implemented in creating the overall Mandelbrot Set. </p>
+<p>Line 5: polite, concise description of the code's intent in lines 5-13. </p>
+<p>Line 6: we defined jit (and JIT) previously in line 3 as a decorator from the Numba library; basically, it will compile our function for faster execution, and does so with nopython=True, which activates the Python interpreter and thus enables its potential for better performance overall. </p>
+<p>Line 7: here we define 2-parameter mandelbrot function, labeling parameters as c and max_iter. Note that c stands for a complex number and max_iter is an integer specififying the total desired iterations we want to perform. </p>
+<p>Line 8: the variable z initializes some complex number, in this case, z is set to 0. It stores the result of the iterative calculation in the Mandelbrot formula. </p>
+<p>Line 9: this just starts an iteration counter for n; in this case, n is set to go to 0. </p>
+<p>Line 10: this is a while loop that uses the logical conjunction, and, to signify two conditions that must be met for calculations to continue. 
+	Our first condition is that the absolute value of vairable z (defined in line 8) is less than or equal to 2. 
+	Our second condition is that iteration count n (defined in line 9) is less than the chosen max_iter variable. </p>
+<p>Line 11: here we applie the Mandelbrot formula, updating z with each successive iteration. It uses * to square the current value of z, then adds the original complex number c (our mandelbrot function's first parameter). </p>
+<p>Line 12: this is simply our iteration counter, which uses += to determine our increment of n to be 1. </p> 
+<p>Line 13: here the function returns the final value of n, iterations, upon completion of our while loop. This value determines the color of the corresponding point when displaying the overall Mandelbrot Set.</p>
+<p>Lines 15-26: this block of code basically formulates the Mandelbrot Set function. </p>
+<p>Line 15: polite, concise description of the code's intent in lines 16-26.</p>
+<p>Line 16: we defined jit (and JIT) previously in line 3 as a decorator from the Numba library; basically, it will compile our function for faster execution, and does so with nopython=True, which activates the Python interpreter and thus enables its potential for better performance overall. </p>
+<p>Line 17: here we use def to define our 7-parameter function, mandelbrot_set. 
+	variables xmin, xmax are minimum and maximum values for the real (x) axis of the plot; 
+	variables ymin, ymax are minimum and maximum values for the imaginary (y) axis of the plot;
+	variables width, height are the pixel dimensions of our resulting image;
+	and variable max_iter is maximum iterations used in generating each point in the complex plane.	
+	</p>
+<p>Lines 18-19: these lines create the complex plane grid.</p>
+<p>Line 18: here we assign variable r1 to width number of points between xmin and xmax, representing the real (x) coordinates, and
+	np.linspace will create evenly spaced values within this given range.</p>
+<p>Line 19: here we assign variable r2 to the height number of points between ymin and ymax, representing the imaginary (y) coordinates. 
+	Again, np.linspace will create evenly spaced values within this given range.</p>
+<p>Line 20: here we assign variable n3 to the value on the RHS, which are the Mandelbrot calculations for each point in the complex plane.
+	Note that np.empty creates an empty array with given dimensions (height/width).</p>
+<p>Lines 22-24: two nested for loops for determining Mandelbrot Set height and width parameter values within ranges. This is used to create the visual representation of the Mandelbrot set. </p>
+<p>Line 22: first for loop with a range for width. Here, i will be the real part of the complex number, corresponding to the generated horizontal x-coordinate pixel. </p>
+<p>Line 23: second for loop with a range for height. Here, j will be the imaginary part of the complex number, corresponding to the generated vertical y-coordinate pixel. 
+	Interestingly, j is the imaginary unit in Python rather than the typical mathematical represenation i. </p>
+<p>Line 24: r1[i] + 1j * r2[j] creates a complex number.
+r1[i] will be the real part of the complex number, corresponding to the x-coordinate similarly described in line 22;
+r2[j] provides the imaginary part of the complex number, corresponding to the y-coordinate similarly described in line 23;
+1j represents the imaginary unit (square root of -1), also as described in line 23.  
+ Both arguments, (r1[i] + 1j * r2[j]) and max_iter, will be passed to the mandelbrot function; note that this is the mandelbrot function and NOT the mandelbrot set function.
+The result returned by the mandelbrot function will then be assigned to the array, n3, at the current pixel location (n3[i, j]). </p>
+<p>Line 26: here, we use return to return n3. After the loops have processed all pixels, array n3, now containing the calculated values for the entire image, is returned. Array n3 will then be used to visualize the Mandelbrot set.</p>
+<p>Lines 28-31: we introduced 7-parameters in our mandelbrot_set function defined in line 17. Here we will be able to manually choose our values to assign to each of our 7-parameters. </p>
+<p>Line 28: concise, polite description of the code's intent in lines 29-31. </p>
+
+	    <figure>
           <img
             src="Mandelbrot Set Image.png"
             alt="Mandelbrot Set Image"
