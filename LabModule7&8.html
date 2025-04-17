@@ -214,7 +214,27 @@ The jit decorator marks functions for optimization by its associated library, Nu
 <p>Line 18: this is simply our iteration counter, which uses += to determine our increment of n to be 1. </p> 
 <p>Line 19: The final value of n after the loop ends is stored in the n3 array at the position (i, j). This value represents how quickly the sequence diverges (goes to infinity) for that specific point.</p>
 <p>Line 21: return command returns the n3 array that contains the calculated values for each point in the grid, which determine the color of that point in the Julia set visualization. Like in the previous Mandelbrot Set, color is an important detail necessary for greater understanding of the generated fractal. </p>
+<p>Lines 23-26: we introduced 7-parameters in our mandelbrot_set function defined in line 17. Here we will be able to manually choose our values to assign to each of our 7-parameters. </p>
+<p>Line 23: concise, polite description of the code's intent in lines 24-26. </p>
+<p>Line 24: these 4 parameters define the boundaries of the rectangular region in the complex plane that will be visualized. </p>
+<p>Line 25: these 2 parameters determine the resolution or the number of points calculated within the defined region. width represents the points along horizontal axis, height the points along the vertical axis. Logically, higher values yield greater resolution at the cost of a higher time for generation. </p>
+<p>Line 26: our final parameter sets the maximum number of iterations the algorithm will perform for each point in the complex plane. </p>
+<p>Line 28: concise, polite description of the code's intent in line 29. </p>
+<p>Line 29: assigns variable c to the value of complex(), which is a function used to create a complex number. Here, -0.8 is the real part while 0.156 is the imaginary part. </p>
+<p>Line 31: concise, polite description of the code's intent in line 32.</p>
+<p>Line 32: here we finally generate the 8-parameter Julia Set, and assign the results determined on the RHS of the equation to a variable, n3. </p>
+<p>Lines 34-39: this code block is necessary for finally plotting the Julia Set using the previous code. </p>
 
+
+<p>Line 34: concise, polite description of the code's intent in lines 34-39.</p>
+<p>Line 35: here we create a new figure for the plot with a specific size of 10 inches by 10 inches using the figure() function from the matplotlib.pyplot module (imported as plt).</p>
+<p>Line 36: plt.imshow() is a function that displays data as an image. n3 calls our data in array form, then uses T to transpose the data.
+	extent=[xmin, xmax, ymin, ymax] specifies the boundaries of the image on the x and y axes, essentially defining the zoom level and area of the Mandelbrot set being visualized using the xmin, xmax, ymin, and ymax variables. 
+	sets the colormap to 'hot', meaning the image will use a color gradient ranging from black to red to yellow and white, often used for visualizing heat or intensity.
+	interpolation='bilinear' will determine how the pixels are interpolated to create a smooth image; 'bilinear' interpolation uses a weighted average of the neighboring pixels, resulting in a smoother appearance. </p>
+<p>Line 37: this line adds a colorbar to the plot, providing a visual representation of the color mapping to the values in the Julia set. It helps in understanding the relationship between the colors and the calculated values, and is vital in displaying the Julia Set. </p>
+<p>Line 38: this line just sets the title of the plot. Interestingly, we use {c} to incorporate the currently set value of the complex constant c. </p>
+<p>Line 39: plt.show() simply displays the final plot, making the code come to life, so to speak. </p>
         <figure>
           <img
             src="Julia Set Image.png"
