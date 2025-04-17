@@ -113,6 +113,28 @@ The result returned by the mandelbrot function will then be assigned to the arra
 <p>Line 26: here, we use return to return n3. After the loops have processed all pixels, array n3, now containing the calculated values for the entire image, is returned. Array n3 will then be used to visualize the Mandelbrot set.</p>
 <p>Lines 28-31: we introduced 7-parameters in our mandelbrot_set function defined in line 17. Here we will be able to manually choose our values to assign to each of our 7-parameters. </p>
 <p>Line 28: concise, polite description of the code's intent in lines 29-31. </p>
+<p>Line 29: these 4 parameters define the boundaries of the rectangular region in the complex plane that will be visualized.</p>
+<p>Line 30: these 2 parameters determine the resolution or the number of points calculated within the defined region. width represents the points along horizontal axis, height the points along the vertical axis. Logically, higher values yield greater resolution at the cost of a higher time for generation. </p>
+<p>Line 31: our final parameter sets the maximum number of iterations the algorithm will perform for each point in the complex plane. </p>
+<p>Line 33: concise, polite description of the code intent in line 34. </p>
+<p>Line 34: here, we are just assigning the mandelbrot_set function (previously created) to the variable n3 for simpler/shorter coding in later lines. It's easier, more efficient, and less cumbersome writing to write n3 rather than constantly repeat the entire function. </p>
+<p>Lines 35-38: description and code of the parameters for the initial zoom level. </p>
+<p>Line 35: concise, polite description of the code's intent in lines 36-38. </p>
+<p>Line 36: this defines the overall zoom in region (rectangular). xmin, ymin represents the bottom left corner coordinate and xmax, ymax represents the top right coordinate. x-values along the horizontal represent the real part, whereas y-values represent the imaginary part. </p>
+<p>Line 37: as discussed earlier, parameters height and width determine the overall resolution of the final image. For example, height =800, width=800 will generate an 800x800 pixel image. Larger pixel images result in greater waiting periods for images to generate than smaller pixel counts.  </p>
+<p>Line 38: the parameter representing the maximum number of iterations performed for each point in the complex plane. Like the height and width parameters, max_iter can increase the complexity of the overall image when assigned larger values, but time duration will understandably increase as the program runs.  </p>
+<p>Line 40: concise, polite description of the code's intent in line 41. </p>
+<p>Line 41: this line assigns the zoomed in portion of the mandelbrot_set function to varaible n3. </p>
+<p>Lines 43-48: this code block is necessary for finally plotting the Madelbrot Set using the previous code. </p>
+<p>Line 43: concise, polite description of the code's intent in lines 44-48.</p>
+<p>Line 44: here we create a new figure for the plot with a specific size of 10 inches by 10 inches using the figure() function from the matplotlib.pyplot module (imported as plt).</p>
+<p>Line 45: plt.imshow() is a function that displays data as an image. n3 calls our data in array form, then uses T to transpose the data.
+	extent=[xmin, xmax, ymin, ymax] specifies the boundaries of the image on the x and y axes, essentially defining the zoom level and area of the Mandelbrot set being visualized using the xmin, xmax, ymin, and ymax variables. 
+	sets the colormap to 'hot', meaning the image will use a color gradient ranging from black to red to yellow and white, often used for visualizing heat or intensity. </p>
+<p>Line 46: this line adds a colorbar to the plot, providing a visual representation of the color mapping to the values in the Mandelbrot set. It helps in understanding the relationship between the colors and the calculated values.</p>
+<p>Line 47: this line just sets the title of the plot. </p>
+<p>Line 48: plt.show() simply displays the final plot, making the code come to life, so to speak. </p>
+
 
 	    <figure>
           <img
