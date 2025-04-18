@@ -463,8 +463,8 @@ The jit decorator marks functions for optimization by its associated library, Nu
 
         <figure>
           <img
-            src="M-Set Code 1.png"
-            alt="M-Set Code 1"
+            src="J-Set Code 1.png"
+            alt="J-Set Code 1"
             width="600"
             height="400"
             loading="lazy"
@@ -473,23 +473,40 @@ The jit decorator marks functions for optimization by its associated library, Nu
 
         <figure>
           <img
-            src="M-Set Code 1.1.png"
-            alt="M-Set Set Code 1.1"
+            src="J-Set Code 1.1.png"
+            alt="J-Set Set Code 1.1"
             width="600"
             height="400"
             loading="lazy"
           />
           <figcaption>
-            Julia Set Color Variation Code (Twilight colormap)
+            Julia Set Color Variation 1 Code (Hot colormap)
           </figcaption>
         </figure>	    
 <p>Just like in the previously discussed Mandelbrot Set Code, we can extend the Julia Set code slightly to change color maps. In line 4, we use from to take from library, matplotlib, by using import to use its associated colormaps module.
 This module specifically provides a collection of colormaps that can be used to color plots. 
 Colormaps are essentially a range of colors that can be used to represent data values in a visualization. Therefore, in line 36, we can now alter the cmap parameter. 
-So, instead of the 'hot' colormap, we can pick another, like 'twilight'. There are many other colormaps to pick from, including but not limited to:
-‘magma’; ‘inferno’; ‘plasma’; ‘viridis’; ‘cividis’; ‘twilight’; ‘twilight_shifted’; ‘turbo’; ‘Blues’; ‘BrBG’; ‘BuGn’; ‘BuPu’; ‘CMRmap’;
-‘GnBu’; ‘Greens’; ‘Greys’; ‘OrRd’; ‘Oranges’; etc. (Matplotlib). </p>	    
+So, instead of the 'hot' colormap, we can pick another. However, we will keep this variation as 'hot' in order to emphasize our slight alterations in line 29. 
+Here, we change the real part from -0.8 to -0.78, left the imaginary part at 0.156. This demonstrates how different the fractal can appear with a relatively minor change, 
+emphasized by keeping our colormap on 'hot' with cmap.
+</p>	    
 
+        <figure>
+          <img
+            src="J-Set 1.png"
+            alt="J-Set 1"
+            width="600"
+            height="400"
+            loading="lazy"
+          />
+          <figcaption>
+           Julia Set Color Variation 1 Image (Hot colormap)
+          </figcaption>
+        </figure>	
+
+
+
+	    
       <!-- RESULTS & ANALYSIS SECTION -->
       <!-- -------------------------------------------------------------------------------------------- -->
       <!-- -------------------------------------------------------------------------------------------- -->
