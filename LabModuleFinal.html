@@ -327,8 +327,12 @@
           </figcaption>
         </figure>	
 
-<p>Line 1: </p>
-<p>Line 2: </p>
+<p>Line 1: !wget: This part uses a command called wget, which is a tool often used in Linux environments to download files from the internet. The exclamation mark (!) at the beginning tells the Jupyter Notebook to run this line as a shell command, not as regular Python code.
+	-O turtle_setup.py: This option specifies that the downloaded file should be saved with the name turtle_setup.py. -O is an option for wget that lets you choose the output file name.
+	'https://raw.githubusercontent.com/williamedwardhahn/fractal25/refs/heads/main/turtle_setup.py': This is the URL where the file is located. It's getting the file turtle_setup.py from a GitHub repository. </p>
+<p>Line 2: from turtle_setup: This indicates that we're importing things from a file named turtle_setup.py - the one we just downloaded. 
+	import *: The asterisk (*) is a wildcard. It means "import everything" from that file. This makes all the functions, classes, and variables defined in turtle_setup.py available for use in the current notebook. 
+	</p>
 
         <figure>
           <img
