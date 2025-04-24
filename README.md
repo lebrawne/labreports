@@ -19,7 +19,7 @@ Lab Module 6: https://lebrawne.github.io/labreports/LabModule6.html
 
 Lab Module 7 & 8: https://lebrawne.github.io/labreports/LabModule7&8.html
 
-Viewing Material: https://lebrawne.github.io/labreports/ViewingMaterial.html
+Lab Module Final: https://lebrawne.github.io/labreports/LabModuleFinal.html
 
 # Notes
 
