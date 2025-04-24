@@ -153,14 +153,19 @@
 	In essence, the barnsley_fern function simulates the growth of the fern by repeatedly applying random transformations to a point's coordinates. 
 	The probabilities associated with each transformation determine the overall shape and structure of the resulting fractal pattern.</p>
 <p>Line 48: Concise, polite description of the code's intent in lines 49-50.</p>
-<p>Line 49:  </p>
-<p>Line 50: </p>
-<p>Line 52: </p>
-<p>Line 53: </p>
-<p>Line 54: </p>
-<p>Line 55: </p>
-<p>Line 56: </p>
-<p>Line 57: </p>
+<p>Line 49: This line sets a variable called iterations to 100000. This variable controls how many times the barnsley_fern function will be executed, essentially determining the number of points that will be generated for the fern. More iterations generally lead to a more detailed and filled-in fern shape.</p>
+<p>Line 50: This line calls the barnsley_fern function, passing the iterations value as an argument. The barnsley_fern function is designed to calculate and return a list of (x, y) coordinate pairs that represent points on the fern. The result is stored in the fern_points variable, which will then hold all the points that make up the Barnsley Fern fractal.</p>
+<p>Line 52: Concise, polite description of the code's intent in lines 53-57.</p>
+<p>Line 53: In this line, fern_points is a list of (x, y) coordinate tuples representing the points of the fern.
+	*fern_points unpacks this list into individual tuples.
+	zip() combines the corresponding elements of these tuples into two separate tuples: one for the x-values (x_vals) and one for the y-values (y_vals). </p>
+<p>Line 54: This line creates a new figure for the plot with a specific size of 6 inches wide and 10 inches tall. This ensures that the fern is displayed with the correct proportions.</p>
+<p>Line 55: In this line, plt.scatter() creates a scatter plot.
+	x_vals and y_vals provide the data for the x and y coordinates of the points.
+	s=0.1 sets the size of the points to be very small (0.1), creating a more detailed and fern-like appearance. 
+	color='green' makes the points green, which is a traditional color for the Barnsley Fern. </p>
+<p>Line 56: This line adds a title to the plot, simply labeling it "Barnsley Fern".</p>
+<p>Line 57: Here, we use plt.show() as the final command that displays the created plot on the screen. Without it, the plot would be generated but not shown. </p>
 
 
 	    
