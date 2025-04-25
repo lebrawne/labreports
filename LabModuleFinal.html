@@ -361,51 +361,77 @@
 math is the name of the specific toolbox.</p>
 <p>Line 4: Concise, polite description of the code's intent in lines 5-6.</p>
 <p>Line 5: This line is a function call that initializes and sets up the drawing environment for the turtle graphics. Think of it as creating a blank canvas for the turtle to draw on. </p>
-<p>Line 6: </p>
+<p>Line 6: This line is another function call that's specific to turtle graphics. It makes the turtle visible on the screen. Imagine the turtle as a small arrow or triangle that moves around and draws lines. Initially, it might be hidden, and this command makes it appear so you can watch it draw.</p>
 <p>Line 8: Concise, polite description of the code's intent in lines 9-10.</p>
-<p>Line 9: </p>
-<p>Line 10: </p>
+<p>Line 9: This line defines a 2-parameter function named apply_rules. The parameters are char and rules:
+	char represents a single character from the L-system's current string (e.g., 'F', '+', '-');
+	rules is a dictionary that holds the rules of the L-system. The keys of the dictionary are characters, and the values are the strings they should be replaced with. </p>
+<p>Line 10: This line is the heart of the function; it uses the get method of the rules dictionary. 
+	It tries to find the char in the dictionary's keys.
+	If it finds char, it returns the corresponding value (the replacement string from the rules).
+	If it doesn't find char in the keys, it returns the original char itself.
+</p>
 <p>Line 12: Concise, polite description of the code's intent in lines 13-18.</p>
-<p>Line 13: </p>
-<p>Line 14: </p>
-<p>Line 15: </p>
-<p>Line 16: </p>
-<p>Line 17: </p>
-<p>Line 18: </p>
+<p>Line 13: In this line we use def to define a 3-parameter function called generate_lsystem. The generate_lsystem function takes an initial string (axiom), a set of rules (rules), and the number of times to apply those rules (iterations). It then generates the final L-system string that represents the fractal.</p>
+<p>Line 14: In this line, we start with an initial string called the axiom. This will be the starting point of the pattern. </p>
+<p>Line 15: In this line, we start a for loop that runs for the given number of iterations. </p>
+<p>Line 16: This line applies the L-system rules to the current_string. 
+	[apply_rules(char, rules) for char in current_string] is a list comprehension that iterates through each character (char) in the current_string.
+	For each character, it calls the apply_rules function (which we'll discuss next) to see if there's a rule to replace that character. 
+	The result is a list of characters (either the original or the replacements).
+	Finally, ''.join(...) joins the list of characters back into a single string, creating the next_string. </p>
+<p>Line 17: In this line, current_string is updated to the newly generated next_string, ready for the next iteration of the loop. </p>
+<p>Line 18: After all the iterations, the function returns the final current_string, which now represents the complete L-system pattern.</p>
 <p>Line 20: Concise, polite description of the code's intent in lines 21-31.</p>
-<p>Line 21: </p>
-<p>Line 22: </p>
-<p>Line 23: </p>
-<p>Line 24: </p>
-<p>Line 25: </p>
-<p>Line 26: </p>
-<p>Line 27: </p>
-<p>Line 28: </p>
-<p>Line 29: </p>
-<p>Line 30: </p>
-<p>Line 31: </p>
+<p>Line 21: In this line, we use def to define the 3-parameter function draw_lsystem.
+	First parameter: turtle_string is a string of characters representing the L-system instructions (e.g., "F+F-F"). 
+	Second parameter: length is the distance the turtle moves forward with each 'F' command.
+	Third parameter: angle is the angle the turtle turns with each '+' (left) or '-' (right) command.
+</p>
+<p>Line 22: In this line, we have a for loop that iterates through each character (command) in the turtle_string. </p>
+<p>Lines 23-24: In this If statement, if the current command is 'F', the turtle moves forward by the specified length. </p>
+<p>Lines 25-26: In this first else if statement, if the current command is '+', the turtle turns left by the specified angle. </p>
+<p>Lines 27-28: In this second else if statement, if the current command is '-', the turtle turns right by the specified angle. </p>
+<p>Line 29: Concise, polite description of the code's intent in lines 30-31. </p>
+<p>Lines 30-31: Here, this part handles any other characters in the turtle_string. In this case, it's used to ignore 'L' and 'R', which are used in the L-system rules but don't directly control the turtle's movement. The pass keyword simply means "do nothing." I've never seen the pass method before now, and find it interesting. </p>
 <p>Line 33: Concise, polite description of the code's intent in lines 34-40.</p>
-<p>Line 34: </p>
-<p>Line 35: </p>
-<p>Line 36: </p>
-<p>Line 37: </p>
-<p>Line 38: </p>
-<p>Line 39: </p>
-<p>Line 40: </p>
+<p>Line 34: This line defines the starting point or initiator of the L-system. It's like a seed for the pattern. Here, it's simply the character 'L'. </p>
+<p>Lines 35-38: This holds the dictionary rules defining the rules for how the L-system evolves. 
+	Our first replacement rule is that 'L' gets replaced with '-RF+LFL+FR-'.
+	Our second replacement rule is that 'R' gets replaced with '+LF-RFR-FL+'. </p>
+<p>Line 39: Here, variable iterations assigns and controls how many times the rules are applied; logically, more iterations mean a more complex and detailed Hilbert curve.</p>
+<p>Line 40: Here, variable angle assigns the angle the turtle will turn when drawing the curve; in this case, it's a right angle (90 degrees). </p>
 <p>Line 42: Concise, polite description of the code's intent in line 43.</p>
-<p>Line 43: </p>
+<p>Line 43: In this line, hilbert_string is a variable that will store a sequence of characters (a string). This string is essentially a set of instructions that will guide the turtle to draw the Hilbert curve.
+	generate_lsystem(...) is a function call; we're calling a function named generate_lsystem to actually create the instruction string for the Hilbert curve.
+	In essence, this line is using the generate_lsystem function, together with the L-system's starting point (axiom), rules (rules), and number of repetitions (iterations), to produce a string of instructions (hilbert_string) that defines the structure of the Hilbert curve. This instruction string will then be used to guide the turtle's movements and draw the curve.	
+</p>
 <p>Line 45: Concise, polite description of the code's intent in lines 46-48.</p>
-<p>Line 46: </p>
-<p>Line 47: </p>
-<p>Line 48: </p>
+<p>Line 46: This line sets a variable called size to a specified amount (in this case, 400).
+	This size represents the total desired width or height of the completed Hilbert curve on the screen. 
+</p>
+<p>Line 47: This line calculates the total number of line segments (n) needed to draw the Hilbert curve.
+	It uses the iterations variable (which was set to 5 earlier in the code).
+	Hilbert curves are based on a recursive pattern where the number of segments increases exponentially with the number of iterations. The formula 2 ** iterations - 1 reflects this pattern. </p>
+<p>Line 48: This line calculates the length of each individual step the turtle should take. 
+	It divides the total size of the Hilbert curve by the number of segments (n).
+	This ensures that the entire curve fits within the desired dimensions set by the size variable.
+</p>
 <p>Line 50: Concise, polite description of the code's intent in lines 51-53.</p>
-<p>Line 51: </p>
-<p>Line 52: </p>
-<p>Line 53: </p>
+<p>Line 51: In this line,jump() is a function that moves the turtle to a specific location on the screen without drawing a line. 
+	400 and 500 are the x and y coordinates of the desired starting position. Think of the screen like a graph, where (0,0) is in the center. This line sends the turtle to that particular (x,y) spot to begin. </p>
+<p>Line 52: Here, face() is a function that sets the direction the turtle is facing, like if you were to rotate a compass. 
+	0 represents an angle in degrees. 0 means it's pointing to the right, 90 would be upwards.
+	So, this sets the turtle to face right before beginning the drawing of the curve.
+</p>
+<p>Line 53: In this line, color() is a function that sets the color the turtle will use to draw. 'blue' sets the color to blue. We could easily change the color to something else, like 'red'. </p>
 <p>Line 55: Concise, polite description of the code's intent in line 56.</p>
-<p>Line 56: </p>
+<p>Line 56: In this line, draw_lsystem(...) is a function call that invokes the function named draw_lsystem, which is defined earlier in the code. This function's job is to interpret instructions and move the turtle accordingly.
+	Recall that: hilbert_string is the variable holding the sequence of instructions (like "F", "+", "-") that define the shape of the Hilbert curve, which were generated by another function (generate_lsystem) using the L-system rules;
+	length is the variable determining the distance the turtle moves forward with each "F" instruction in the hilbert_string which is calculated based on the desired overall size of the curve and the number of iterations;
+	and that angle is the variable defining the angle the turtle turns with each "+" (left) or "-" (right) instruction in the hilbert_string which is set to 90 degrees for the Hilbert curve. </p>
 <p>Line 58: Concise, polite description of the code's intent in line 59.</p>
-<p>Line 59: </p>
+<p>Line 59: Finally, in this line we use the show() function. The show() function is the command that makes the turtle graphics window visible and displays the drawing that the turtle has created. It essentially pauses the execution of the code and keeps the window open until you close it manually. You would typically call show() after you've finished giving the turtle all its drawing instructions so that you can see the result. </p>
 	    
 
         <figure>
