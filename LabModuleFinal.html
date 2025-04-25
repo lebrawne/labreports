@@ -144,7 +144,7 @@ Cosmetic modifications include a color change from blue 'b' to red 'r' in line 2
         </figure>
 <p>In this modification, I attempted to create a simple, 3 dimensional tetrahedron on a 2 dimensional coordinate grid. Ineterestingly, there is a visual effect of x,y,z coordinate axes within
 the resulting image, shown as a more solid blue color where dots have gathered more densely. In the associated code, I added five vertices in line 8 along with associated coordinate values and doubled
-the value assigned to the iterations variable in line 9 from 50,000 to 100,000. To compensate for the five vertices,I altered our k variable in line 15;
+the value assigned to the iterates variable in line 9 from 50,000 to 100,000. To compensate for the five vertices,I altered our k variable in line 15;
 it is now assigned to randint(0,4). Although I kept the original blue color in line 20, I decreased point size to s=0.05 in line 20. </p>	      
 
 
@@ -196,7 +196,11 @@ It has a subtle third dimensional illusion. </p>
 	</figcaption>
         </figure>
 	      
-<p></p>
+<p>In this figure, I attempted to reproduce a Sierpinski Carpet; although the resulting image is not quite a Sierpinski Carpet, the squares form a noticeable pattern.
+To do this, I: altered the original multiplication constants in line 6 from 1/2 to 4/9; included four vertices in line 8 instead of 3; compensated for the additional 
+vertex by changing the assignment of k in line 15; and increased dot size from s=0.1 to s=0.2 in line 20. Note that I kept the original iteration value of the iterates 
+variable in line 9.
+</p>
 
 
 	    <figure>
@@ -221,7 +225,9 @@ It has a subtle third dimensional illusion. </p>
 	</figcaption>
         </figure>
 
-<p></p>
+<p>This figure showcases how subtle changes to coordinates of vertices can produce different images. I implemented the code from the previous Squares figure, but 
+only altered the last three coordinate values of the vertices in line 8. Otherwise, the code remains the same from the previous Squares code, except for a blatant color change in line 20 
+from blue 'b' to green 'g'. Instead of a square-like figure forming, the resulting image is reminiscent to a Sierpinski Triangle. </p>
 
 	    <figure>
           <img
@@ -245,7 +251,8 @@ It has a subtle third dimensional illusion. </p>
 	</figcaption>
         </figure>
 
-<p></p>
+<p>In this figure, I have again only manipulated the coordinate values of the vertices in line 8 and changed color blue 'b' to yellow 'y' in line 20. This once more showcases
+how subtle changes to coordinate values of the vertices can yield completely different resulting images. </p>
 
 	    <figure>
           <img
@@ -269,7 +276,7 @@ It has a subtle third dimensional illusion. </p>
 	</figcaption>
         </figure>
 	      
-	      
+<p></p>      
 
 <h3>Chaos Game: Barnsley Fern</h2>      
 	      
