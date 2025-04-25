@@ -276,7 +276,11 @@ how subtle changes to coordinate values of the vertices can yield completely dif
 	</figcaption>
         </figure>
 	      
-<p></p>      
+<p>This figure is more whimsical, as it appears like footprints crossing through wet paint. It was created by numerous alterations to the code, including:
+alteration of the original constant in line 6 from 1/2 to 0.99; addition of a fourth vertex in line 8 with more sophisticated vertex values than in previous modifications;
+doubling the value of the iterates variable in line 9 from 50,000 to 100,000; compensating for the fourth vertex by changing the value of the k variable in line 15 from
+randint(0,2) to randint(0,3); and finally, changing color to green 'g' and shrinking point size from s=0.1 to s=0.01, all in line 20.
+</p>      
 
 <h3>Chaos Game: Barnsley Fern</h2>      
 	      
