@@ -537,7 +537,11 @@ showcases how much the produced image has evolved from its preceding Sierpinski 
 	</figcaption>
         </figure>
 
-<p></p>
+<p>To create this rather foundational fern figure, I made simple changes to the code starting from line 36 (above line 36 remains untouched for this and all upcoming fern figures). 
+	In line 36, I slightly altered the value assigned to the L-System rules variable; I merely changed the middle bracket set from [+F-F-F] to [F-FF]. Next, I changed the turtle's
+	jump() function coordinates in line 45, raising both x and y values for a better fit on the canvas. Finally, I changed the values assigned to variables length and angle, in lines 50-51, by 
+	decreasing length from 8 to 7, and by increasing the angle from 25 to 33. The idea behind this figure is to showcase how relatively simple changes can greatly impact the final form of the fern.
+</p>
 
 	    <figure>
           <img
@@ -561,7 +565,11 @@ showcases how much the produced image has evolved from its preceding Sierpinski 
 	</figcaption>
         </figure>	    
 
-<p></p>
+<p>Upon closer inspection, viewers can spy enclosed leaves on this fern. What is especially interesting about this fern is that these leaves, 
+	entirely absent in the image produced by the original code, are generated with only one modification to the L-System rules variable in line 36. 
+	In the values assigned to variable rules in line 36, notice that the first minus sign within the second bracket is missing; i.e., 
+	instead of 'FF+[+F-F-F]-[-F+F+F]' we have 'FF+[+F-F-F]-[F+F+F]. No other alterations have been madee to the original code, yet leaves have generated.
+</p>
 	    
 	    <figure>
           <img
@@ -581,11 +589,12 @@ showcases how much the produced image has evolved from its preceding Sierpinski 
             loading="lazy"
           />
 	<figcaption>
-		Fern 3 (Lush)
+		Fern 3 (Lush Areca Palm)
 	</figcaption>
         </figure>
 
-<p></p>
+<p>This fern is very similarly created as the first modified fern. In comparison to the first modified fern, as described in-depth above, this fern has only minor 
+changes to the assigned value to the rules variable in line 36. This showcases how small changes to only the rules variable can produce a much more lush fern.  </p>
 
 
 	    <figure>
@@ -609,7 +618,11 @@ showcases how much the produced image has evolved from its preceding Sierpinski 
 		Fern 4 (Fractal Vine Tangle)
 	</figcaption>
         </figure>
-	    
+<p>Here, we have only made two tiny parity changes to the assigned value to the rules variable in line 36. 
+	However, we have also increased the value originally assigned to the iterations variable in line 39 from 4 to 5. 
+	Additionally, we have increased the x and y coordinate values in the jump() function found in line 45. 
+	In line 50, we have decreased the length variable's associated value from 8 to 7. Finally, we have raised the angle variable value in
+	line 51 from 25 to 39. We have generated an interesting fern fractal that has vine-like lines twisting into unique patterns. </p>	    
 
 	    <figure>
           <img
@@ -633,7 +646,9 @@ showcases how much the produced image has evolved from its preceding Sierpinski 
 	</figcaption>
         </figure>
 	    
-<p></p>
+<p>Again, we have modified the original rules in line 36, increased iterations from 4 to 5 in line 39, and altered the jump() function coordinates in line 45
+	for a better fit. What it is particularly interesting in regards to the code is lines 50 and 51, in which we greatly decrease the length variable to be assigned to 2,
+	and moderately decreased the angle variable to be assigned to 10 degrees. A stiff weed-like plant generates, reminding me of some sort of vegetation found underwater. </p>
 
 
 	    <figure>
@@ -658,7 +673,9 @@ showcases how much the produced image has evolved from its preceding Sierpinski 
 	</figcaption>
         </figure>	    
 
-<p></p>
+<p>Here, an interesting grid has formed. The rules variable in line 36 has only slightly been altered; the iterations variable in line 39 has been increased from 4 to 5;
+the jump() function has been altered, specifically by increasing the x-coordinate; and the value assigned to the length variable in line 50 has been decreased from 8 to 5. 
+Now, this distinct grid-like appearance is heavily formed by the value assigned to the angle variable in line 51, which is set at 90 degrees (forming right angles). </p>
 
 	    <figure>
           <img
@@ -682,7 +699,9 @@ showcases how much the produced image has evolved from its preceding Sierpinski 
 	</figcaption>
         </figure>
 	    
-<p></p>
+<p>I particularly like my tumbleweed variation. Instead of the classic green color typically assigned to signify the plant-like appearance of these constructed fractals, I chose 'tan' 
+to emphasize the desert tumbleweed appearance. For brevity, the code modifications made to create the tumbleweed are explicitly listed in the adjoining image of the associated code. 
+I like the apparent rotation effect of the individual strands. </p>
 
 
 	    <figure>
@@ -707,7 +726,7 @@ showcases how much the produced image has evolved from its preceding Sierpinski 
 	</figcaption>
         </figure>
 
-<p></p>
+<p>This fern has a fascinating flower-like fractal structure within its core. Again, the associated code with the modifications to create this fern is shown, and all modifications are apparent. </p>
 	    
 	    
 <h2>Part 3: Hilbert Curves</h2>
