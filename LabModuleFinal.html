@@ -884,7 +884,7 @@ math is the name of the specific toolbox.</p>
             loading="lazy"
           />
 	<figcaption>
-		Hilbert Variation 1 (Wolfram MathWorld) 
+		Hilbert Variation 1 (Wolfram MathWorld, Hilbert Curve I) 
 	</figcaption>
         </figure>
 
@@ -894,9 +894,37 @@ The value assigned to the angle variable in line 40 remains 90 degrees.
 Note that these changes require a shift of the final image on the canvas; i.e., changing the jump() function coordinates in 
 line 51 from jump(400,500) to jump(600,400), which pushes our image more toward the center of the turtle canvas. Now, just by changing the signs results in a slightly different image (it appears to flip from right to left). </p>
 
-   
 
 
+  <figure>
+          <img
+            src="Hilbert Code 2.png"
+            alt="Hilbert Code 2"
+            width="600"
+            height="400"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="Hilbert Image 2.png"
+            alt="Hilbert Image 2"
+            width="600"
+            height="400"
+            loading="lazy"
+          />
+	<figcaption>
+		Hilbert Variation 1 (Wolfram MathWorld, Hilbert Curve II) 
+	</figcaption>
+        </figure>
+
+<p>Wolfram MathWorld also illustrates a closely related variation of the Hilbert Curve, entitled Hilbert Curve II (Weisstein). Since the Hilbert Curve II is a Lindenmayer System, it can be translated into
+the provided values assigned to the rules variable in lines 36-37 of our code (Weisstein). Wolfram MathWorld implements X and Y, where X is the initial string; I have thus substituted L for X and R for Y, 
+since L is our assigned value to our axiom variable in line 34 (Weisstein). These substitions can easily be seen in the associated code image in lines 36-37. This doesn't quite produce the exact picture, as the 
+orientation is slightly off--it needs to be rotated. So, we change our turtle's orientation with the face() function in line 52 from face(0) to face(90). The resulting image is now correct, but
+rather large; we modify our iterations variable in line 39, reducing the assigned value from 5 to 3, as well as reduce our total Hilbert Curve size in line 46 by by decreasing 
+the size variable value from 400 to 100. Conveniently, our jump() function coordinates can remain the same in line 51 as jump(400,500). Note also that the angle variable in line 40 retains the same value of 90 degrees. 
+</p>
 	    
       </section>
 
