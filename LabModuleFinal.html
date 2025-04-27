@@ -383,16 +383,20 @@ showcases how much the produced image has evolved from its preceding Sierpinski 
 
 	 <figure>
           <img
-            src="L-System Setup Code.png"
-            alt="L-System Setup Code"
+            src="Barnsley Matrix.png"
+            alt="Barnsley Matrix"
             width="600"
             height="400"
             loading="lazy"
           />
           <figcaption>
-            L-System Setup Code
+            Barnsley's Fern Affine Functions (Wolfram MathWorld)
           </figcaption>
         </figure>
+
+<p>Before beginning on the Barnsley Fern Modifications, I thought it was pertinent to include a more mathematical explanation of the formulation of Barnsley's Fern to exemplify the 
+	complexity involved in mathematical translation when writing code. Above is an image taken from a page on Wolfram MathWorld, Barnsley's Fern (Weisstein Barnsley). This visualizes the
+	matrices within the transformations section of the code in lines 4-23. </p>
 	    
 	    
 <h2>Part 2: L-Systems</h2>
@@ -930,9 +934,9 @@ line 51 from jump(400,500) to jump(600,400), which pushes our image more toward 
 	</figcaption>
         </figure>
 
-<p>Wolfram MathWorld also illustrates a closely related variation of the Hilbert Curve, entitled Hilbert Curve II (Weisstein). Since the Hilbert Curve II is a Lindenmayer System, it can be translated into
-the provided values assigned to the rules variable in lines 36-37 of our code (Weisstein). Wolfram MathWorld implements X and Y, where X is the initial string; I have thus substituted L for X and R for Y, 
-since L is our assigned value to our axiom variable in line 34 (Weisstein). These substitions can easily be seen in the associated code image in lines 36-37. This doesn't quite produce the exact picture, as the 
+<p>Wolfram MathWorld also illustrates a closely related variation of the Hilbert Curve, entitled Hilbert Curve II (Weisstein Hilbert). Since the Hilbert Curve II is a Lindenmayer System, it can be translated into
+the provided values assigned to the rules variable in lines 36-37 of our code (Weisstein Hilbert). Wolfram MathWorld implements X and Y, where X is the initial string; I have thus substituted L for X and R for Y, 
+since L is our assigned value to our axiom variable in line 34 (Weisstein Hilbert). These substitions can easily be seen in the associated code image in lines 36-37. This doesn't quite produce the exact picture, as the 
 orientation is slightly off--it needs to be rotated. So, we change our turtle's orientation with the face() function in line 52 from face(0) to face(90). The resulting image is now correct, but
 rather large; we modify our iterations variable in line 39, reducing the assigned value from 5 to 3, as well as reduce our total Hilbert Curve size in line 46 by by decreasing 
 the size variable value from 400 to 100. Conveniently, our jump() function coordinates can remain the same in line 51 as jump(400,500). Note also that the angle variable in line 40 retains the same value of 90 degrees. 
@@ -1141,6 +1145,8 @@ can easily see how color plays a vital role in understanding extremely complex s
 
 <p>Peitgen, Heinz-Otto, et al. Chaos and Fractals New Frontiers of Science. 2nd ed., Springer, 1992. </p> 
 
+<p>Weisstein, Eric W. "Barnsley's Fern." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/BarnsleysFern.html. Accessed 27 April 2025. </p>
+	      
 <p>Weisstein, Eric W. "Hilbert Curve." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/HilbertCurve.html. Accessed 26 April 2025. </p>
       </section>
 
