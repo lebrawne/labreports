@@ -866,13 +866,34 @@ math is the name of the specific toolbox.</p>
 
 <h3>Hilbert Curves Modifications</h3>
       
+  <figure>
+          <img
+            src="Hilbert Code 1.png"
+            alt="Hilbert Code 1"
+            width="600"
+            height="400"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src="Hilbert Image 1.png"
+            alt="Hilbert Image 1"
+            width="600"
+            height="400"
+            loading="lazy"
+          />
+	<figcaption>
+		Hilbert Variation 1 (Wolfram MathWorld) 
+	</figcaption>
+        </figure>
 
-
-
+<p>Wolfram Mathworld has an interesting snippet concerning Hilbert Curves (Weisstein). Their variation requires a very basic alteration to the values assigned to the rules variable, specifically in lines 36-37.
+All that is required is to switch negative signs with positive signs, and vice versa. Doing this also requires a shift of the final image on the canvas; i.e., changing the jump() function coordinates in 
+line 51 from jump(400,500) to jump(600,400), which pushes our image more toward the center of the turtle canvas. Now, just by changing the signs results in a slightly different image. </p>
 
    
 
-     
 
 	    
       </section>
