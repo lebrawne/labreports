@@ -950,7 +950,12 @@ the size variable value from 400 to 100. Conveniently, our jump() function coord
 	</figcaption>
         </figure>
 
-<p></p>	    
+<p>This variation resulted from basic changes; I only slightly changed the Lindenmayer rules in lines 36-37, erasing the final positive/negative signs in each, and adding a couple L's and R's.
+So, our rule for L, originally -RF+LFL+FR-, now becomes -RFR+LFL+RLF; and our rule for R, originally +LF-RFR-FL+, now becomes +LFL-RFR-FLR (shown in the associated code image). I increased the 
+iterations variable value from 5 to 6 in line 39, and maintained the 90 degree value of variable in line 40. I increased the size variable by 250% in line 46, changing the value from 400 to 1000. 
+Finally, I subtly repositioned the image by adjusting the turtle's canvas by decreasing the y-coordinate from 500 to 400 using jump() function in line 51, and chose gold as the image color with function
+color() in line 53. 
+</p>	    
 
 
  <figure>
