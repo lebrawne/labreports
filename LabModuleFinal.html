@@ -971,11 +971,15 @@ the size variable value from 400 to 100. Conveniently, our jump() function coord
             loading="lazy"
           />
 	<figcaption>
-		Hilbert Variation 4 (Abstract Turquoise) 
+		Hilbert Variation 4 (Abstract Turquoise Fractal Fish School) 
 	</figcaption>
         </figure>
 
-<p></p>
+<p>At first, it appears the resulting image contains a random scribbling effect; however, a fractal pattern is apparent upon inspection, as the individual smaller shapes formed have a uniform 
+consistency. These shapes loosely--very loosely--resemble fish drawn by a child. To create it, I altered the rules in lines 36-37, shown in the code image above; decreased the value of the iterations 
+variable to 4 in line 39; and halved the original 90 degree angle to 45 degrees by changing the assigned value to variable angle. I significantly decreased the total image size using the size() variable in line 46,
+so instead of size = 400 we now have size = 150. Finally, I repositioned the displayed image on the canvas by essentially switching the x and y coordinate values with function jump() in line 51; 
+	x is now 500 instead of 400, and y is now 400 instead of 500. Finally, for fun I manipulated color using the color() function in line 53, picking turquoise instead of blue. </p>
 
 
  <figure>
@@ -1000,7 +1004,11 @@ the size variable value from 400 to 100. Conveniently, our jump() function coord
 	</figcaption>
         </figure>
 
-<p></p>
+<p>Triangles dominate this fractal, formed using more complicated L and R rules in lines 36-37 (specifics shown in code above). I decreased the assigned value to the iterations variable
+in line 39 by 1, for a total of 4 iterations, and significantly raised the original angle variable value from 90 degrees to 240 degrees in line 40. I slightly adjusted the image placement on 
+the turtle's canvas using function jump() in line 51, increasing the x-coordinate by 100 and decreasing the y-coordinate by 100, yielding jump(500,300). For fun, I changed the turtle's starting direction
+using function face(), rotating from 0 to 270 degrees in line 52. Notably, I altered the color from blue to silver with the color() function in line 53. The outer, larger triangles are particularly 
+interesting, as they intermingle with the smaller triangles. </p>
 
 
  <figure>
@@ -1053,7 +1061,7 @@ Finally, for a more dramatic effect, I changed image color using the color() fun
 	</figcaption>
         </figure>
 
-<p>This Nightmare fractal was generated precisely in the same manner as the previous Nightmare fractal, with only one alteration overall to the code; 
+<p>This nightmarish fractal was generated precisely in the same manner as the previous Nightmare fractal, with only one alteration overall to the code; 
 	instead of assigning 5 to the variable iterations in line 39, I assigned 6. Therefore, only one additional iteration is performed, showcasing how merely increasing 
 	iterations can garner greater complexity in fractal creation. And to think I thought Hilbert Curves seemed so innocuous; I suppose this Hellish image changes my initial assumption.  </p>
 
